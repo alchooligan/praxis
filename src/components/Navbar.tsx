@@ -8,8 +8,7 @@ export function Navbar() {
         <div className="nav-links">
           <Link href="/solutii">Soluții</Link>
           <Link href="/cum-functioneaza">Proces</Link>
-          <Link href="/studii-de-caz">Studii de Caz</Link>
-          <Link href="/contact">Contact</Link>
+<Link href="/contact">Contact</Link>
         </div>
         <Link href="/contact" className="btn-nav">Consultație gratuită</Link>
       </div>

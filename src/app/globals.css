@@ -33,7 +33,7 @@ body{
 .nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:72px}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:100%;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-size:1.4rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);text-decoration:none}
-.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links{display:flex;gap:2rem;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
 .nav-links a{font-size:0.85rem;font-weight:500;color:var(--text-secondary);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s}
 .nav-links a:hover,.nav-links a.active{color:var(--blue)}
 .nav-links a.active{font-weight:600}
@@ -123,7 +123,7 @@ body{
 .vis-audit-tag.auto{background:rgba(34,197,94,0.1);color:#16a34a}
 .vis-audit-tag.manual{background:rgba(245,158,11,0.1);color:#d97706}
 .vis-audit-tag.risk{background:rgba(239,68,68,0.1);color:#dc2626}
-.vis-connect{display:flex;gap:1rem;align-items:center;justify-content:center}
+.vis-connect{display:flex;gap:0.6rem;align-items:center;justify-content:center;transform:scale(0.9);transform-origin:center}
 .vis-connect-node{width:64px;height:64px;background:var(--surface);border-radius:1rem;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);position:relative}
 .vis-connect-center{width:56px;height:56px;background:var(--blue);border-radius:1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,70,200,0.3)}
 .vis-connect-line{width:40px;height:2px;background:var(--border);position:relative}
@@ -187,6 +187,9 @@ body{
 .footer-col a:hover{color:var(--blue)}
 .footer-bottom{max-width:1200px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;font-size:0.7rem;color:var(--text-tertiary);letter-spacing:0.1em;font-weight:500}
 
+/* Phone frame */
+.phone-frame{width:340px;min-height:640px}
+
 /* Responsive grid utility */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 
@@ -213,7 +216,8 @@ body{
   .hero-buttons .btn-primary,.hero-buttons .btn-ghost{width:100%;text-align:center}
 
   /* Phone mockup */
-  .hero-illustration > div:last-child{width:280px!important;min-height:560px!important;transform:none!important}
+  .phone-frame{width:100%;max-width:300px;min-height:auto;transform:none;border-radius:2.2rem;padding:0.6rem}
+  .notif-slide-3,.notif-slide-4{display:none}
 
   /* Nav */
   .nav-links{display:none}
@@ -232,10 +236,10 @@ body{
   .process-num{font-size:3rem}
   .process-step h4{font-size:1.3rem}
   .process-visual{height:220px}
-  .vis-connect{flex-wrap:wrap;gap:0.5rem}
-  .vis-connect-node{width:48px;height:48px}
-  .vis-connect-center{width:44px;height:44px}
-  .vis-connect-line{width:24px}
+  .vis-connect{flex-wrap:nowrap;gap:0.3rem;transform:scale(0.8);transform-origin:center}
+  .vis-connect-node{width:44px;height:44px}
+  .vis-connect-center{width:40px;height:40px}
+  .vis-connect-line{width:16px}
   .vis-audit-row{padding:0.5rem 0.6rem;gap:0.5rem}
   .vis-audit-label{font-size:0.72rem}
   .vis-audit-tag{font-size:0.55rem;padding:0.15rem 0.4rem}

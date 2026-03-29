@@ -52,9 +52,7 @@ export default function Home() {
               filter: "blur(40px)", zIndex: 0, pointerEvents: "none",
             }} />
             {/* Phone Frame */}
-            <div className="float-2" style={{
-              width: "340px",
-              minHeight: "640px",
+            <div className="float-2 phone-frame" style={{
               background: "#1c1c1e",
               borderRadius: "3rem",
               padding: "0.8rem",
@@ -143,6 +141,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Marquee — part of hero flow */}
+      <section className="marquee-section" style={{ borderTop: "none", paddingTop: "1rem" }}>
+        <div className="marquee-label">Ce putem automatiza</div>
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span key={i} className="marquee-pill">{item}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pain Points */}
       <section className="section reveal" style={{ background: "var(--white)" }}>
         <div className="section-inner">
@@ -183,29 +193,36 @@ export default function Home() {
                 <h4>Analizăm</h4>
                 <p>Ne uităm la cum lucrezi azi — ce faci manual, ce durează mult, ce se pierde pe drum. Gratuit, fără obligații.</p>
               </div>
-              <div className="process-visual">
-                <div className="vis-audit">
-                  <div className="vis-audit-row highlight">
-                    <span className="material-symbols-outlined">chat</span>
-                    <span className="vis-audit-label">Răspunsuri clienți WhatsApp</span>
-                    <span className="vis-audit-tag auto">Automatizabil</span>
-                  </div>
-                  <div className="vis-audit-row highlight">
-                    <span className="material-symbols-outlined">event</span>
-                    <span className="vis-audit-label">Confirmare programări</span>
-                    <span className="vis-audit-tag auto">Automatizabil</span>
-                  </div>
-                  <div className="vis-audit-row">
-                    <span className="material-symbols-outlined">receipt_long</span>
-                    <span className="vis-audit-label">Facturare manuală</span>
-                    <span className="vis-audit-tag manual">Manual</span>
-                  </div>
-                  <div className="vis-audit-row">
-                    <span className="material-symbols-outlined">phone_missed</span>
-                    <span className="vis-audit-label">Apeluri pierdute</span>
-                    <span className="vis-audit-tag risk">Pierdere</span>
-                  </div>
-                </div>
+              <div className="process-visual" style={{ flexDirection: "column", padding: "2rem", gap: "1rem" }}>
+                {/* Clock face — 65% repetitive, 35% business real */}
+                <svg viewBox="0 0 200 200" width="200" height="200" style={{ margin: "0 auto" }}>
+                  {/* Clock face */}
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="var(--border)" strokeWidth="1" />
+                  {/* Hour marks */}
+                  {[...Array(12)].map((_, i) => {
+                    const angle = (i * 30 - 90) * Math.PI / 180;
+                    const x1 = 100 + 82 * Math.cos(angle);
+                    const y1 = 100 + 82 * Math.sin(angle);
+                    const x2 = 100 + 88 * Math.cos(angle);
+                    const y2 = 100 + 88 * Math.sin(angle);
+                    return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--text-tertiary)" strokeWidth="1.5" strokeLinecap="round" />;
+                  })}
+                  {/* 65% repetitive arc — red/warm, from 12 o'clock clockwise */}
+                  <circle cx="100" cy="100" r="72" fill="none" stroke="#ef4444" strokeWidth="20" strokeDasharray={`${0.65 * 2 * Math.PI * 72} ${0.35 * 2 * Math.PI * 72}`} strokeDashoffset="0" transform="rotate(-90 100 100)" opacity="0.15" strokeLinecap="round" />
+                  <circle cx="100" cy="100" r="72" fill="none" stroke="#ef4444" strokeWidth="3" strokeDasharray={`${0.65 * 2 * Math.PI * 72} ${0.35 * 2 * Math.PI * 72}`} strokeDashoffset="0" transform="rotate(-90 100 100)" opacity="0.6" strokeLinecap="round" />
+                  {/* 35% business real arc — blue */}
+                  <circle cx="100" cy="100" r="72" fill="none" stroke="var(--blue)" strokeWidth="20" strokeDasharray={`${0.35 * 2 * Math.PI * 72} ${0.65 * 2 * Math.PI * 72}`} strokeDashoffset={`${-0.65 * 2 * Math.PI * 72}`} transform="rotate(-90 100 100)" opacity="0.12" strokeLinecap="round" />
+                  <circle cx="100" cy="100" r="72" fill="none" stroke="var(--blue)" strokeWidth="3" strokeDasharray={`${0.35 * 2 * Math.PI * 72} ${0.65 * 2 * Math.PI * 72}`} strokeDashoffset={`${-0.65 * 2 * Math.PI * 72}`} transform="rotate(-90 100 100)" opacity="0.8" strokeLinecap="round" />
+                  {/* Center */}
+                  <circle cx="100" cy="100" r="4" fill="var(--text-tertiary)" />
+                  {/* Clock hands — hour at ~5:12 (65% of 8h day) */}
+                  <line x1="100" y1="100" x2="100" y2="45" stroke="var(--text)" strokeWidth="2.5" strokeLinecap="round" />
+                  <line x1="100" y1="100" x2="130" y2="85" stroke="var(--text-tertiary)" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
+                <p style={{ textAlign: "center", fontSize: "0.85rem", color: "var(--text-secondary)", fontWeight: 500, lineHeight: 1.5 }}>
+                  <span style={{ fontWeight: 700, color: "#ef4444" }}>65%</span> din zi e muncă repetitivă.
+                  <br /><span style={{ fontWeight: 700, color: "var(--blue)" }}>35%</span> e afacere reală.
+                </p>
               </div>
             </div>
 
@@ -271,7 +288,7 @@ export default function Home() {
             </div>
           </div>
           <div className="cases-grid">
-            <Link href="/studii-de-caz/eco-ride" className="case-card">
+            <div className="case-card">
               <div className="case-img">
                 <Image alt="Eco Ride electric scooters" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",transition:"transform 0.6s"}} src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFeMUVQb3QoXm_IGdp54-E6CX5kTrgoLLdE4Ays8Bi0WEWulX06yvyjRQWrD1I7cYb9EvjesQgBUzV0nabJbiRU88rFmSBD1GDCllXKgSfrxEYgbp3uw3NC17Z7SqM-dJHhS5lOpzHC_EQgdE9jWK6xe_yCuQExtYDYH1qH_J7GBzonXAoJ-a-mTDwAFlyjwjtP41ZPbgI0_QDpWrGp7yV7pTSfpnani0NcewPaxfZXxbmgDm6chtsrY_lHk9IJOMexB25IS097Vs" />
               </div>
@@ -284,10 +301,9 @@ export default function Home() {
                   <span className="case-badge">0 pierderi</span>
                   <span className="case-badge">Raport zilnic</span>
                 </div>
-                <span className="case-link">VEZI CUM AM FĂCUT-O &rarr;</span>
               </div>
-            </Link>
-            <Link href="/studii-de-caz/clinica-dentara" className="case-card">
+            </div>
+            <div className="case-card">
               <div className="case-img">
                 <Image alt="Clinică dentară modernă" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",transition:"transform 0.6s"}} src="https://lh3.googleusercontent.com/aida-public/AB6AXuALISmtAXLH6XK0dMzNH5NYzk9BmAHA6oCJcTtvdgbD8b7jI1mYil99oZXrXbspmTRLaO7j7dEF0wvtnar_TP5twPRNJABxMD_Pa-gs59cBd2HdELnn47wJtwdIW7-hIDc7UMAiQ8WIbTLnLdegh1HEti1O8ULN_VY7tWArIiB8EUmLSItXrd3lJKk-IEFx4rhHIKf-ExLsP8AHs2-aFKw0DstPvJ4aJS4M5-Pl35jqZ1C2ZyD4ONC3gkPhk5_IPeLOWNUSSyfi_9A" />
               </div>
@@ -300,24 +316,13 @@ export default function Home() {
                   <span className="case-badge">2h+/zi libere</span>
                   <span className="case-badge">3x recenzii</span>
                 </div>
-                <span className="case-link">VEZI CUM AM FĂCUT-O &rarr;</span>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Marquee */}
-      <section className="marquee-section">
-        <div className="marquee-label">Ce putem automatiza</div>
-        <div className="marquee-container">
-          <div className="marquee-track">
-            {[...marqueeItems, ...marqueeItems].map((item, i) => (
-              <span key={i} className="marquee-pill">{item}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="cta-section">

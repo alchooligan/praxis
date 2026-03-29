@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 
-const businessTypes = [
-  "Clinică / cabinet medical",
-  "Magazin online",
-  "Salon de înfrumusețare",
-  "Închirieri (mașini, trotinete, Airbnb)",
-  "Construcții / meșteșuguri",
-  "Altceva",
-];
+
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -132,20 +125,16 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Tip afacere</label>
-                    <select
-                      required
+                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Cu ce se ocupă afacerea ta?</label>
+                    <input
+                      type="text"
+                      placeholder="ex: salon de înfrumusețare, clinică dentară, magazin online..."
                       style={{
                         width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
                         padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
                         outline: "none", fontFamily: "inherit", color: "var(--text)",
                       }}
-                    >
-                      <option value="">Alege...</option>
-                      {businessTypes.map((t) => (
-                        <option key={t} value={t}>{t}</option>
-                      ))}
-                    </select>
+                    />
                   </div>
                 </div>
 

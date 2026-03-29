@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 interface Industry {
   id: string;
@@ -66,6 +69,8 @@ const industries: Industry[] = [
 ];
 
 export default function Solutii() {
+  const [openId, setOpenId] = useState<string | null>(null);
+
   return (
     <>
       {/* Hero */}
@@ -83,60 +88,100 @@ export default function Solutii() {
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
           }}>
-            {"Ce "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizăm</span>
+            Ce <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizăm</span>
           </h1>
           <p style={{
             marginTop: "1.5rem", fontSize: "1.1rem", color: "var(--text-secondary)",
             lineHeight: 1.7, maxWidth: "640px", marginLeft: "auto", marginRight: "auto", fontWeight: 400,
           }}>
-            {"Fiecare industrie are frustrările ei. Noi le cunoaștem — și avem soluții concrete pentru fiecare."}
+            Alege industria ta și vezi ce putem automatiza.
           </p>
         </div>
       </section>
 
-      {/* Industries */}
-      {industries.map((ind, i) => (
-        <section
-          key={ind.id}
-          id={ind.id}
-          className="section"
-          style={{ background: i % 2 === 0 ? "var(--white)" : "var(--surface)" }}
-        >
-          <div className="section-inner">
-            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <div className="pain-icon" style={{ width: "56px", height: "56px", borderRadius: "16px", marginBottom: 0 }}>
-                <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "26px" }}>{ind.icon}</span>
-              </div>
-              <h2 className="section-title" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>{ind.title}</h2>
-            </div>
-            <div className="pain-grid">
-              {ind.automations.map((a) => (
-                <div key={a.name} className="pain-card">
-                  <div className="pain-icon">
-                    <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "22px" }}>{a.icon}</span>
-                  </div>
-                  <h4>{a.name}</h4>
-                  <p>{a.desc}</p>
+      {/* Accordion Industries */}
+      <section className="section" style={{ background: "var(--white)" }}>
+        <div className="section-inner" style={{ maxWidth: "800px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+            {industries.map((ind) => {
+              const isOpen = openId === ind.id;
+              return (
+                <div key={ind.id} id={ind.id} style={{
+                  background: "var(--white)", border: "1px solid var(--border)",
+                  borderRadius: "1.25rem", overflow: "hidden",
+                  transition: "all 0.3s",
+                  ...(isOpen ? { boxShadow: "0 8px 30px rgba(0,70,200,0.06)", borderColor: "rgba(0,70,200,0.15)" } : {}),
+                }}>
+                  {/* Header — clickable */}
+                  <button
+                    onClick={() => setOpenId(isOpen ? null : ind.id)}
+                    style={{
+                      width: "100%", display: "flex", alignItems: "center", gap: "1rem",
+                      padding: "1.5rem 2rem", background: "none", border: "none",
+                      cursor: "pointer", fontFamily: "inherit", textAlign: "left",
+                    }}
+                  >
+                    <div style={{
+                      width: "48px", height: "48px", borderRadius: "14px", background: "var(--blue-50)",
+                      display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                    }}>
+                      <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "24px" }}>{ind.icon}</span>
+                    </div>
+                    <span style={{ flex: 1, fontSize: "1.15rem", fontWeight: 600, color: "var(--text)", letterSpacing: "-0.01em" }}>
+                      {ind.title}
+                    </span>
+                    <span className="material-symbols-outlined" style={{
+                      color: "var(--text-tertiary)", fontSize: "24px",
+                      transition: "transform 0.3s",
+                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}>
+                      expand_more
+                    </span>
+                  </button>
+
+                  {/* Content — expandable */}
+                  {isOpen && (
+                    <div style={{ padding: "0 2rem 2rem" }}>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                        {ind.automations.map((a) => (
+                          <div key={a.name} style={{
+                            display: "flex", gap: "1rem", padding: "1.2rem",
+                            background: "var(--surface)", borderRadius: "1rem", alignItems: "flex-start",
+                          }}>
+                            <div style={{
+                              width: "40px", height: "40px", borderRadius: "10px", background: "var(--blue-50)",
+                              display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                            }}>
+                              <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "20px" }}>{a.icon}</span>
+                            </div>
+                            <div>
+                              <div style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--text)", marginBottom: "0.3rem" }}>{a.name}</div>
+                              <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{a.desc}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div style={{ marginTop: "1.5rem" }}>
+                        <Link href="/contact" className="btn-primary" style={{ fontSize: "0.75rem", padding: "0.7rem 1.8rem" }}>
+                          VREAU ASTA PENTRU AFACEREA MEA
+                        </Link>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
-            <div style={{ marginTop: "2rem" }}>
-              <Link href="/contact" className="btn-ghost" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
-                {"VREAU ASTA PENTRU AFACEREA MEA "}
-                <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>arrow_forward</span>
-              </Link>
-            </div>
+              );
+            })}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="cta-section">
         <div className="cta-box">
-          <h2>{"Nu vezi industria ta "}<span>aici?</span></h2>
-          <p>{"Dacă ai oameni care fac aceleași lucruri în fiecare zi, putem automatiza. Hai să vorbim."}</p>
+          <h2>Nu vezi industria ta <span>aici?</span></h2>
+          <p>Dacă ai oameni care fac aceleași lucruri în fiecare zi, putem automatiza. Hai să vorbim.</p>
           <Link href="/contact" className="btn-cta">
-            {"PROGRAMEAZĂ O CONSULTAȚIE GRATUITĂ"}
+            PROGRAMEAZĂ O CONSULTAȚIE GRATUITĂ
           </Link>
         </div>
       </section>
