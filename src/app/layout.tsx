@@ -15,6 +15,27 @@ export const metadata: Metadata = {
   title: "Praxis | Automatizare AI pentru Afaceri",
   description:
     "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
+  openGraph: {
+    title: "Praxis — Automatizăm munca repetitivă din afacerea ta",
+    description: "65% din ziua ta e muncă repetitivă. Construim sisteme care o fac pentru tine. Tu te ocupi de afacere.",
+    type: "website",
+    locale: "ro_RO",
+    siteName: "Praxis",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Praxis — Automatizare AI pentru Afaceri",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Praxis — Automatizăm munca repetitivă din afacerea ta",
+    description: "65% din ziua ta e muncă repetitivă. Construim sisteme care o fac pentru tine.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
