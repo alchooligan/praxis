@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Praxis | Automatizare AI pentru Afaceri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e0e2e9",
+              "surface-container-high": "#e5e8ef",
+              "surface-container": "#ebeef4",
+              "on-surface": "#181c21",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#181c21",
+              "on-secondary-container": "#003d6b",
+              "secondary-container": "#58aaff",
+              "on-tertiary-fixed": "#002109",
+              "surface-dim": "#d7dae0",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#005322",
+              "background": "#f7f9ff",
+              "primary": "#004ac6",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e2e9",
+              "primary-container": "#2563eb",
+              "on-secondary-fixed-variant": "#00497e",
+              "on-primary": "#ffffff",
+              "surface": "#f7f9ff",
+              "inverse-surface": "#2d3136",
+              "on-primary-fixed": "#00174b",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#d2e4ff",
+              "tertiary-fixed-dim": "#3de273",
+              "primary-fixed-dim": "#b4c5ff",
+              "tertiary-container": "#007e37",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#003ea8",
+              "on-surface-variant": "#434655",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#001d37",
+              "secondary": "#0061a5",
+              "surface-container-low": "#f1f4fa",
+              "tertiary-fixed": "#66ff8e",
+              "surface-tint": "#0053db",
+              "on-primary-container": "#eeefff",
+              "surface-bright": "#f7f9ff",
+              "primary-fixed": "#dbe1ff",
+              "outline": "#737686",
+              "on-tertiary-container": "#c1ffc6",
+              "inverse-primary": "#b4c5ff",
+              "secondary-fixed-dim": "#9fcaff",
+              "tertiary": "#00622a",
+              "outline-variant": "#c3c6d7",
+              "inverse-on-surface": "#eef1f7",
+              "accent-coral": "#FF7F50"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'marquee': 'marquee 40s linear infinite',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 74, 198, 0.2);
+        }
+        .ethereal-gradient {
+            background: linear-gradient(135deg, #f7f9ff 0%, #ffffff 50%, #f1f4fa 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary/10 selection:text-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,74,198,0.05)] h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<div class="text-2xl font-serif italic text-slate-900">Praxis</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-blue-700 font-semibold border-b-2 border-blue-600 transition-colors" href="#">Servicii</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Proces</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Studii de Caz</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors" href="#">Tarife</a>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-full font-label text-sm font-semibold tracking-wider hover:opacity-80 transition-all duration-300 transform active:scale-95">
+            CONTACT
+        </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[900px] flex items-center overflow-hidden px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+<div class="space-y-10 animate-fade-in-up">
+<h1 class="text-6xl md:text-7xl font-headline leading-[1.1] text-on-surface">
+                    Automatizăm munca <br/>
+<span class="italic text-primary font-medium">repetitivă</span> din <br/>
+                    afacerea ta
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Construim sisteme inteligente care preiau sarcinile pe care le faci de 10 ori pe zi — tu te ocupi de business, ele lucrează non-stop.
+                </p>
+<div class="flex flex-wrap gap-5 pt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label text-sm font-bold tracking-widest hover:shadow-lg hover:shadow-primary/20 transition-all">
+                        PROGRAMEAZĂ O CONSULTAȚIE GRATUITĂ
+                    </button>
+<button class="glass-morphism border border-outline-variant/30 text-primary px-10 py-4 rounded-full font-label text-sm font-bold tracking-widest hover:bg-surface-container-low transition-all">
+                        VEZI DEMO
+                    </button>
+</div>
+<!-- Inline Stats -->
+<div class="flex flex-wrap gap-6 pt-6 text-sm">
+<div class="flex items-center gap-1.5"><span class="font-bold text-primary text-base">15+</span> <span class="text-on-surface-variant">ore câștigate/săpt</span></div>
+<div class="text-slate-300">•</div>
+<div class="flex items-center gap-1.5"><span class="font-bold text-primary text-base">85%</span> <span class="text-on-surface-variant">mai puține mesaje</span></div>
+<div class="text-slate-300">•</div>
+<div class="flex items-center gap-1.5"><span class="font-bold text-primary text-base">24/7</span> <span class="text-on-surface-variant">activ</span></div>
+</div>
+</div>
+<!-- Premium Floating Workflow Illustration -->
+<div class="relative group h-[600px] flex items-center justify-center">
+<div class="absolute -inset-10 bg-primary/5 rounded-full blur-3xl opacity-50"></div>
+<div class="relative w-full max-w-md">
+<!-- WhatsApp Bubble -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-64 bg-[#25D366] text-white p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: -1s;">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+</div>
+<div>
+<div class="text-[10px] opacity-80 font-bold uppercase tracking-wider">MESAJ NOU</div>
+<div class="text-xs font-semibold">"Bună, mai aveți locuri?"</div>
+</div>
+</div>
+</div>
+<!-- Arrow Down -->
+<div class="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
+<div class="w-0.5 h-16 bg-gradient-to-b from-primary/40 to-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary -mt-1"></div>
+</div>
+<!-- Processing Center -->
+<div class="absolute top-24 left-1/2 -translate-x-1/2 w-72 glass-morphism border border-white p-6 rounded-[2rem] shadow-2xl z-20">
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="text-sm font-bold text-on-surface">Procesor AI Praxis</div>
+<div class="text-[10px] text-primary font-bold uppercase tracking-widest mt-1">Sincronizare activă</div>
+</div>
+</div>
+<!-- Result Cards -->
+<div class="absolute top-64 w-full flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="w-64 glass-morphism border border-white p-4 rounded-xl shadow-lg -rotate-2 transform hover:rotate-0 transition-transform duration-500 ml-0 flex items-center gap-3">
+<div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined text-sm" data-icon="database">database</span>
+</div>
+<span class="text-xs font-bold text-slate-700">Bază de date actualizată</span>
+</div>
+<!-- Card 2 -->
+<div class="w-64 glass-morphism border border-white p-4 rounded-xl shadow-lg rotate-1 transform hover:rotate-0 transition-transform duration-500 self-center flex items-center gap-3 z-10">
+<div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</div>
+<span class="text-xs font-bold text-slate-700">Răspuns trimis</span>
+</div>
+<!-- Card 3 -->
+<div class="w-64 glass-morphism border border-white p-4 rounded-xl shadow-lg -rotate-1 transform hover:rotate-0 transition-transform duration-500 ml-auto flex items-center gap-3">
+<div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined text-sm" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="text-xs font-bold text-slate-700">Factură creată</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pain Points Section -->
+<section class="reveal py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<h2 class="text-4xl md:text-5xl font-headline leading-tight">Te <span class="italic text-primary">recunoști?</span></h2>
+<p class="mt-4 text-on-surface-variant max-w-xl">Aproape toate micile afaceri suferă de aceleași probleme de ineficiență. Noi le eliminăm complet.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-10 rounded-3xl bg-white border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary/5 transition-colors overflow-hidden p-3 relative">
+<div class="absolute inset-2 flex flex-col gap-1">
+<div class="h-2 w-full bg-slate-200 rounded-full"></div>
+<div class="h-2 w-3/4 bg-primary/20 rounded-full"></div>
+<div class="h-6 w-1/2 bg-primary/40 rounded-lg mt-1"></div>
+<div class="h-6 w-1/2 bg-slate-200 rounded-lg self-end"></div>
+</div>
+</div>
+<h4 class="text-2xl font-headline font-semibold mb-4 text-slate-900">Răspunzi la aceleași mesaje de 20 de ori pe zi</h4>
+<p class="text-on-surface-variant leading-relaxed">Același răspuns copiat de 20 de ori. Același client care întreabă același lucru.</p>
+</div>
+<div class="p-10 rounded-3xl bg-white border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary/5 transition-colors overflow-hidden p-3 relative">
+<div class="w-full flex flex-col gap-1.5">
+<div class="flex gap-1"><div class="w-4 h-2 bg-slate-300 rounded"></div><div class="w-8 h-2 bg-slate-200 rounded"></div></div>
+<div class="flex gap-1"><div class="w-6 h-2 bg-slate-200 rounded"></div><div class="w-4 h-2 bg-slate-300 rounded"></div></div>
+<div class="flex gap-1"><div class="w-4 h-2 bg-slate-300 rounded"></div><div class="w-6 h-2 bg-slate-200 rounded"></div></div>
+<div class="absolute bottom-1 right-1 bg-[#25D366] text-white p-1 rounded-full"><span class="material-symbols-outlined text-[10px]" data-icon="arrow_forward">arrow_forward</span></div>
+</div>
+</div>
+<h4 class="text-2xl font-headline font-semibold mb-4 text-slate-900">Ții evidența în Excel și pe WhatsApp</h4>
+<p class="text-on-surface-variant leading-relaxed">Scrollezi prin 200 de mesaje ca să găsești un număr de comandă.</p>
+</div>
+<div class="p-10 rounded-3xl bg-white border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary/5 transition-colors overflow-hidden p-3 relative">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary/40 text-4xl animate-pulse" data-icon="phone_callback">phone_callback</span>
+<div class="mt-2 flex gap-1"><div class="w-1.5 h-1.5 rounded-full bg-error animate-bounce"></div><div class="w-1.5 h-1.5 rounded-full bg-error animate-bounce" style="animation-delay:0.2s"></div></div>
+</div>
+</div>
+<h4 class="text-2xl font-headline font-semibold mb-4 text-slate-900">Pierzi clienți pentru că nu apuci să răspunzi</h4>
+<p class="text-on-surface-variant leading-relaxed">Telefonul sună, ești ocupat, clientul sună concurența.</p>
+</div>
+<div class="p-10 rounded-3xl bg-white border border-slate-100 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary/5 transition-colors overflow-hidden p-3 relative">
+<div class="flex flex-col items-center gap-1">
+<div class="w-10 h-12 border-2 border-slate-200 rounded flex flex-col p-1 gap-1">
+<div class="h-1 w-full bg-slate-100"></div>
+<div class="h-1 w-2/3 bg-slate-100"></div>
+</div>
+<div class="absolute top-2 right-2 w-6 h-6 bg-white rounded-full shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="schedule">schedule</span>
+</div>
+</div>
+</div>
+<h4 class="text-2xl font-headline font-semibold mb-4 text-slate-900">Facturile se fac manual și plățile se pierd</h4>
+<p class="text-on-surface-variant leading-relaxed">Factura pleacă cu 3 zile întârziere, plata vine cu 30.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="reveal py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-32">
+<h2 class="text-4xl md:text-5xl font-headline">Cum <span class="italic text-primary">lucrăm</span></h2>
+</div>
+<div class="space-y-48">
+<!-- Step 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-24 -left-8 text-[12rem] font-headline font-bold text-primary/5 pointer-events-none">01</div>
+<h4 class="text-3xl font-headline font-bold mb-6">Audit &amp; Strategie</h4>
+<p class="text-lg text-on-surface-variant leading-relaxed">Analizăm fluxurile actuale și identificăm procesele care pot fi automatizate imediat. Nu venim cu soluții standard, ci cu o hartă digitală creată special pentru structura ta de business.</p>
+</div>
+<div class="bg-white rounded-[3rem] p-8 shadow-2xl shadow-primary/5 border border-slate-100 h-[400px] flex items-center justify-center">
+<div class="relative w-64 h-64 flex items-center justify-center">
+<div class="absolute inset-0 border-2 border-dashed border-primary/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+<span class="material-symbols-outlined text-primary text-8xl" data-icon="search_insights">search_insights</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="bg-white rounded-[3rem] p-8 shadow-2xl shadow-primary/5 border border-slate-100 h-[400px] flex items-center justify-center order-2 md:order-1">
+<div class="flex gap-4">
+<div class="w-24 h-24 bg-primary/10 rounded-2xl flex items-center justify-center transform -rotate-12 translate-x-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="extension">extension</span>
+</div>
+<div class="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 transform rotate-6">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="link">link</span>
+</div>
+</div>
+</div>
+<div class="relative order-1 md:order-2">
+<div class="absolute -top-24 -left-8 text-[12rem] font-headline font-bold text-primary/5 pointer-events-none">02</div>
+<h4 class="text-3xl font-headline font-bold mb-6">Implementare Custom</h4>
+<p class="text-lg text-on-surface-variant leading-relaxed">Construim infrastructura tehnică și integrăm sistemele AI dedicate afacerii tale. Conectăm WhatsApp-ul, CRM-ul și platforma de facturare într-un singur ecosistem care "vorbește" fluent.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-24 -left-8 text-[12rem] font-headline font-bold text-primary/5 pointer-events-none">03</div>
+<h4 class="text-3xl font-headline font-bold mb-6">Monitorizare &amp; Suport</h4>
+<p class="text-lg text-on-surface-variant leading-relaxed">Lansăm soluția și oferim mentenanță continuă pentru a asigura performanța optimă. Afacerea ta crește, iar sistemele se adaptează automat noilor tale nevoi.</p>
+</div>
+<div class="bg-white rounded-[3rem] p-8 shadow-2xl shadow-primary/5 border border-slate-100 h-[400px] overflow-hidden">
+<div class="w-full h-full flex flex-col gap-6 p-4">
+<div class="flex justify-between items-center">
+<div class="flex gap-2"><div class="w-3 h-3 rounded-full bg-green-500"></div><div class="text-xs font-bold text-slate-400">STATUS: ACTIV</div></div>
+<div class="text-xs font-bold text-primary">LIVE PERFORMANCE</div>
+</div>
+<div class="flex-1 flex items-end gap-2">
+<div class="w-full bg-primary/5 h-1/2 rounded-t-lg"></div>
+<div class="w-full bg-primary/10 h-2/3 rounded-t-lg"></div>
+<div class="w-full bg-primary/20 h-3/4 rounded-t-lg"></div>
+<div class="w-full bg-primary h-full rounded-t-lg shadow-lg"></div>
+<div class="w-full bg-primary/40 h-5/6 rounded-t-lg"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Section -->
+<section class="py-16 bg-white overflow-hidden border-y border-slate-100">
+<div class="marquee-container relative flex overflow-x-hidden group">
+<div class="animate-marquee whitespace-nowrap flex items-center py-4">
+<!-- First Set -->
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Răspunsuri automate WhatsApp</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Confirmare programări</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Facturare automată</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Tracking comenzi</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Urmărire plăți</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Recenzii Google automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Alerte stoc</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Rapoarte automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Onboarding angajați</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Rezervări online</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Sortare email</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Oferte de preț automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Suport clienți 24/7</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Sincronizare calendar</span>
+<!-- Second Set (for infinite scroll) -->
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Răspunsuri automate WhatsApp</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Confirmare programări</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Facturare automată</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Tracking comenzi</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Urmărire plăți</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Recenzii Google automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Alerte stoc</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Rapoarte automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Onboarding angajați</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Rezervări online</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Sortare email</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Oferte de preț automate</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Suport clienți 24/7</span>
+<span class="px-6 py-2 mx-4 rounded-full bg-primary/5 border border-primary/10 text-primary font-label text-sm font-semibold">Sincronizare calendar</span>
+</div>
+</div>
+</section>
+<!-- Case Studies Section -->
+<section class="reveal py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-headline leading-tight">Rezultate <span class="italic text-primary">reale.</span></h2>
+<p class="mt-4 text-on-surface-variant max-w-lg">Automatizări implementate pentru afaceri reale.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="group relative bg-surface-container-low rounded-[2.5rem] overflow-hidden p-2">
+<div class="h-64 rounded-[2rem] overflow-hidden mb-8">
+<img alt="Eco Ride Automation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-end minimalist photo of electric scooters lined up in a clean modern urban setting with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFeMUVQb3QoXm_IGdp54-E6CX5kTrgoLLdE4Ays8Bi0WEWulX06yvyjRQWrD1I7cYb9EvjesQgBUzV0nabJbiRU88rFmSBD1GDCllXKgSfrxEYgbp3uw3NC17Z7SqM-dJHhS5lOpzHC_EQgdE9jWK6xe_yCuQExtYDYH1qH_J7GBzonXAoJ-a-mTDwAFlyjwjtP41ZPbgI0_QDpWrGp7yV7pTSfpnani0NcewPaxfZXxbmgDm6chtsrY_lHk9IJOMexB25IS097Vs"/>
+</div>
+<div class="px-8 pb-10">
+<div class="text-xs font-bold tracking-widest uppercase mb-4 text-[#FF7F50]">LOGISTICĂ &amp; MOBILITATE</div>
+<h3 class="text-3xl font-headline font-bold mb-4">Eco Ride — Sistem automat pentru 85 trotinete</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Am automatizat gestiunea stării bateriilor și alertarea echipei de teren prin fluxuri AI predictive.</p>
+<div class="flex items-center text-primary font-bold text-sm tracking-widest group-hover:gap-4 transition-all cursor-pointer">
+                            VEZI STUDIU DE CAZ <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-surface-container-low rounded-[2.5rem] overflow-hidden p-2">
+<div class="h-64 rounded-[2rem] overflow-hidden mb-8">
+<img alt="Clinică Dentară AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="bright clinical minimalist dental office with soft lighting and professional high-tech equipment in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALISmtAXLH6XK0dMzNH5NYzk9BmAHA6oCJcTtvdgbD8b7jI1mYil99oZXrXbspmTRLaO7j7dEF0wvtnar_TP5twPRNJABxMD_Pa-gs59cBd2HdELnn47wJtwdIW7-hIDc7UMAiQ8WIbTLnLdegh1HEti1O8ULN_VY7tWArIiB8EUmLSItXrd3lJKk-IEFx4rhHIKf-ExLsP8AHs2-aFKw0DstPvJ4aJS4M5-Pl35jqZ1C2ZyD4ONC3gkPhk5_IPeLOWNUSSyfi_9A"/>
+</div>
+<div class="px-8 pb-10">
+<div class="text-xs font-bold tracking-widest uppercase mb-4 text-[#FF7F50]">SĂNĂTATE</div>
+<h3 class="text-3xl font-headline font-bold mb-4">Clinică dentară — confirmare automată programări</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Reducere de 40% a ratelor de neprezentare prin asistenți vocali și SMS-uri inteligente.</p>
+<div class="flex items-center text-primary font-bold text-sm tracking-widest group-hover:gap-4 transition-all cursor-pointer">
+                            VEZI STUDIU DE CAZ <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Unified CTA -->
+<section class="reveal py-32 px-8">
+<div class="max-w-5xl mx-auto rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-surface">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(0,74,198,0.1),transparent)]"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-headline mb-8 leading-tight">
+                    Fiecare afacere e diferită. <br/>
+                    Hai să vorbim <span class="italic text-primary">15 minute.</span>
+</h2>
+<p class="text-lg md:text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
+                    De aceea începem cu o conversație, nu cu un pachet standard. Îți analizăm procesele gratuit și îți spunem exact ce putem automatiza și cu ce rezultate.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="bg-primary text-white px-12 py-5 rounded-full font-label text-sm font-bold tracking-widest hover:scale-105 transition-all shadow-xl shadow-primary/10">
+                        VREAU AUDIT GRATUIT
+                    </button>
+<button class="text-on-surface font-label text-sm font-bold tracking-widest hover:text-primary transition-colors flex items-center">
+                        VORBEȘTE CU UN SPECIALIST <span class="material-symbols-outlined ml-2" data-icon="arrow_right_alt">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 border-t border-slate-100 pt-20">
+<div class="space-y-6">
+<div class="text-xl font-serif italic text-slate-900">Praxis</div>
+<p class="text-sm text-slate-500 leading-relaxed">Transformăm afacerile prin inteligență artificială aplicată și automatizare strategică.</p>
+</div>
+<div class="space-y-6">
+<h5 class="text-slate-900 font-medium font-body">Companie</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Despre noi</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Servicii</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Portofoliu</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-slate-900 font-medium font-body">Resurse</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Blog</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Ghid Automatizare</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-slate-900 font-medium font-body">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Termeni și Condiții</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">Politică Cookies</a></li>
+<li><a class="text-sm text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all inline-block" href="#">GDPR</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-slate-100">
+<p class="text-xs text-slate-400 text-center">© 2024 Praxis AI. Toate drepturile rezervate.</p>
+</div>
+</footer>
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    // Initial call to reveal elements already in view
+    reveal();
+</script>
+</body></html>

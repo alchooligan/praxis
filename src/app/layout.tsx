@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
+import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { ScrollReveal } from "@/components/ScrollReveal";
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "Praxis | Automatizare AI pentru Afaceri",
+  description:
+    "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="ro" className={`${dmSans.variable} scroll-smooth`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+      </head>
+      <body style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        <Navbar />
+        <main className="pt-[72px]">{children}</main>
+        <Footer />
+        <ScrollReveal />
+      </body>
+    </html>
+  );
+}
