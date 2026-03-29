@@ -12,7 +12,7 @@ export function Footer() {
           <h5>Companie</h5>
           <Link href="/despre">Despre noi</Link>
           <Link href="/solutii">Soluții</Link>
-          <Link href="/studii-de-caz">Studii de caz</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className="footer-col">
           <h5>Resurse</h5>
