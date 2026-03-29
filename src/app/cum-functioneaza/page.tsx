@@ -116,13 +116,14 @@ export default function CumFunctioneaza() {
               {"Ce "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>folosim?</span>
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
             {[
               { name: "WhatsApp Business API", icon: "chat" },
               { name: "n8n", icon: "account_tree" },
               { name: "Make", icon: "hub" },
               { name: "Claude AI", icon: "auto_awesome" },
               { name: "Google Workspace", icon: "cloud" },
+              { name: "Zapier", icon: "bolt" },
             ].map((t) => (
               <div key={t.name} className="pain-card" style={{ padding: "1.5rem", textAlign: "center" }}>
                 <div className="pain-icon" style={{
