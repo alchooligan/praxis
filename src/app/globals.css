@@ -187,20 +187,85 @@ body{
 .footer-col a:hover{color:var(--blue)}
 .footer-bottom{max-width:1200px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;font-size:0.7rem;color:var(--text-tertiary);letter-spacing:0.1em;font-weight:500}
 
+/* Responsive grid utility */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+
 /* Reveal animation */
 .reveal{opacity:0;transform:translateY(24px);transition:all 0.7s ease-out}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* Responsive */
 @media(max-width:768px){
+  /* Layout */
   .hero-grid,.pain-grid,.cases-grid,.process-step,.footer-grid{grid-template-columns:1fr}
+  .section{padding:3.5rem 1.2rem}
+  .section-inner{padding:0}
+
+  /* Hero */
+  .hero{min-height:auto;padding-top:72px;padding-bottom:2rem}
+  .hero-grid{padding:0 1.2rem;gap:2rem}
+  .hero h1{font-size:2.2rem}
+  .hero-sub{font-size:1rem}
   .hero-stats{flex-direction:column;gap:0.6rem;align-items:flex-start}
   .hero-stat-dot{display:none}
-  .hero-illustration{height:400px;margin-top:2rem}
-  .process-step{padding:3rem 0 3rem 2rem}
-  .process-step.reverse{direction:ltr}
-  .cta-box{padding:3rem 2rem}
+  .hero-illustration{height:auto;min-height:auto;margin-top:1rem;padding:1rem 0}
+  .hero-buttons{flex-direction:column;gap:0.8rem}
+  .hero-buttons .btn-primary,.hero-buttons .btn-ghost{width:100%;text-align:center}
+
+  /* Phone mockup */
+  .hero-illustration > div:last-child{width:280px!important;min-height:560px!important;transform:none!important}
+
+  /* Nav */
   .nav-links{display:none}
+  .btn-nav{font-size:0.7rem;padding:0.5rem 1.2rem}
+
+  /* Pain cards */
+  .pain-grid{grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+  .pain-card{padding:1.5rem}
+  .pain-card h4{font-size:1.05rem}
+
+  /* Process */
+  .process-container{margin-top:2rem}
+  .process-progress{display:none}
+  .process-step{padding:2rem 0;gap:1.5rem;opacity:1;transform:none}
+  .process-step.reverse{direction:ltr}
+  .process-num{font-size:3rem}
+  .process-step h4{font-size:1.3rem}
+  .process-visual{height:220px}
+  .vis-connect{flex-wrap:wrap;gap:0.5rem}
+  .vis-connect-node{width:48px;height:48px}
+  .vis-connect-center{width:44px;height:44px}
+  .vis-connect-line{width:24px}
+  .vis-audit-row{padding:0.5rem 0.6rem;gap:0.5rem}
+  .vis-audit-label{font-size:0.72rem}
+  .vis-audit-tag{font-size:0.55rem;padding:0.15rem 0.4rem}
+
+  /* Cases */
+  .cases-grid{gap:1.5rem}
+  .case-img{height:180px}
+  .case-body h3{font-size:1.2rem}
+  .case-body{padding:1rem 1rem 1.5rem}
+
+  /* Marquee */
+  .marquee-section{padding:2rem 0}
+  .marquee-pill{font-size:0.7rem;padding:0.4rem 1rem}
+
+  /* CTA */
+  .cta-section{padding:2.5rem 1.2rem}
+  .cta-box{padding:2.5rem 1.5rem;border-radius:1.5rem}
+  .cta-box h2{font-size:1.6rem}
+  .cta-box p{font-size:0.9rem}
+  .btn-cta{padding:0.8rem 2rem;font-size:0.75rem}
+
+  /* Section titles */
+  .section-title{font-size:1.8rem}
+
+  /* Responsive grids */
+  .grid-2{grid-template-columns:1fr}
+
+  /* Footer */
+  .footer-grid{gap:2rem}
+  .footer-bottom{margin-top:2rem}
 }
 
 /* Phone notification animations */

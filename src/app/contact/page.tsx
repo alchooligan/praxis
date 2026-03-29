@@ -89,7 +89,7 @@ export default function Contact() {
                 }}
                 style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
               >
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+                <div className="grid-2">
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Nume</label>
                     <input
@@ -118,7 +118,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
+                <div className="grid-2">
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Telefon</label>
                     <input

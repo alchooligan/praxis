@@ -26,7 +26,7 @@ export default function Despre() {
       {/* Story */}
       <section className="section" style={{ background: "var(--white)" }}>
         <div className="section-inner" style={{ maxWidth: "1000px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: "4rem", alignItems: "center" }}>
             <div>
               <h2 className="section-title" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)", marginBottom: "2rem" }}>
                 {"De la tech "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>mare</span>{" la afaceri mici"}
@@ -84,7 +84,7 @@ export default function Despre() {
               {"Mică, dar eficientă. Ca automatizările noastre."}
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", maxWidth: "700px", margin: "0 auto" }}>
+          <div className="grid-2" style={{ maxWidth: "700px", margin: "0 auto" }}>
             <div className="pain-card" style={{ textAlign: "center", padding: "2.5rem" }}>
               <div style={{
                 width: "72px", height: "72px", margin: "0 auto 1.5rem", borderRadius: "50%",

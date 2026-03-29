@@ -78,7 +78,7 @@ export default function CumFunctioneaza() {
                   </div>
                   <h3 style={{ fontSize: "1.2rem", fontWeight: 600, letterSpacing: "-0.01em" }}>{item.title}</h3>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+                <div className="grid-2" style={{ gap: 0 }}>
                   <div style={{ padding: "2rem 2.5rem", borderRight: "1px solid var(--border)" }}>
                     <div style={{
                       display: "inline-flex", alignItems: "center", gap: "0.5rem",
