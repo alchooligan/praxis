@@ -35,19 +35,38 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Cal.com placeholder */}
+      {/* WhatsApp CTA */}
       <section className="section" style={{ background: "var(--white)", paddingTop: "0", paddingBottom: "2rem" }}>
         <div className="section-inner" style={{ maxWidth: "700px" }}>
-          <div className="pain-card" style={{ padding: "4rem", textAlign: "center" }}>
-            <div className="pain-icon" style={{
+          <div className="pain-card" style={{ padding: "3rem", textAlign: "center" }}>
+            <div style={{
               width: "64px", height: "64px", borderRadius: "18px",
-              margin: "0 auto 1.5rem", marginBottom: "1.5rem",
+              margin: "0 auto 1.5rem", background: "#25D366",
+              display: "flex", alignItems: "center", justifyContent: "center",
             }}>
-              <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "28px" }}>event</span>
+              <span className="material-symbols-outlined" style={{ color: "#fff", fontSize: "28px" }}>chat</span>
             </div>
-            <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem" }}>
-              {"Calendar embed (Cal.com) — se adaugă după configurare"}
+            <h2 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>
+              Scrie-ne direct pe WhatsApp
+            </h2>
+            <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "1.5rem", maxWidth: "400px", marginLeft: "auto", marginRight: "auto" }}>
+              Răspundem în câteva ore. Spune-ne cu ce se ocupă afacerea ta și ce te frustrează cel mai tare.
             </p>
+            <a
+              href="https://wa.me/4073971703?text=Bun%C4%83%2C%20a%C8%99%20vrea%20s%C4%83%20aflu%20mai%20multe%20despre%20automatiz%C4%83ri%20pentru%20afacerea%20mea."
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: "0.5rem",
+                background: "#25D366", color: "#fff",
+                padding: "1rem 2.4rem", borderRadius: "100px",
+                fontSize: "0.9rem", fontWeight: 700, textDecoration: "none",
+                transition: "all 0.3s", letterSpacing: "0.02em",
+              }}
+            >
+              <span className="material-symbols-outlined" style={{ color: "#fff", fontSize: "20px" }}>chat</span>
+              Deschide WhatsApp
+            </a>
           </div>
         </div>
       </section>
@@ -58,7 +77,7 @@ export default function Contact() {
           <div className="pain-card" style={{ padding: "2.5rem 3rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
               <span className="material-symbols-outlined" style={{ color: "var(--blue)" }}>edit_note</span>
-              <h2 style={{ fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.01em" }}>{"Sau completează formularul"}</h2>
+              <h2 style={{ fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.01em" }}>{"Sau lasă-ne un mesaj"}</h2>
             </div>
 
             {submitted ? (
@@ -160,14 +179,6 @@ export default function Contact() {
             )}
           </div>
 
-          <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-            <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
-              {"Preferi direct? "}
-              <a href="mailto:contact@praxis.ro" style={{ color: "var(--blue)", textDecoration: "none", fontWeight: 600 }}>
-                contact@praxis.ro
-              </a>
-            </p>
-          </div>
         </div>
       </section>
     </>
