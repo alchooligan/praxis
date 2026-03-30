@@ -17,6 +17,7 @@ export function Footer() {
         <div className="footer-col">
           <h5>Resurse</h5>
           <Link href="/cum-functioneaza">Cum funcționează</Link>
+          <Link href="/faq">Întrebări frecvente</Link>
           <Link href="#">Blog (în curând)</Link>
           <Link href="#">Newsletter (în curând)</Link>
         </div>

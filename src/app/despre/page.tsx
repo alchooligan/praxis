@@ -33,13 +33,13 @@ export default function Despre() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
                 <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.7, fontWeight: 400 }}>
-                  {"Am lucrat 7 ani în tech — marketing, strategie, construcție de produse. Am văzut cum companiile mari automatizează tot ce se repetă."}
-                </p>
-                <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.7, fontWeight: 400 }}>
-                  {"Mi-am dat seama că afacerile mici au aceleași probleme, dar nimeni nu le ajută."}
+                  {"Am petrecut 7 ani construind strategii de marketing și creștere pentru companii tech — de la startup-uri în faza de pre-lansare până la produse cu peste un milion de dolari în venituri. Am condus echipe, am construit sisteme de la zero, și am văzut din interior cum companiile care cresc repede automatizează tot ce se repetă."}
                 </p>
                 <p style={{ color: "var(--text)", fontSize: "1.05rem", lineHeight: 1.7, fontWeight: 500 }}>
-                  {"Praxis există ca să schimbe asta."}
+                  {"Diferența? Ele au bugete de sute de mii de euro. Tu nu trebuie să ai."}
+                </p>
+                <p style={{ color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.7, fontWeight: 400 }}>
+                  {"Am luat exact aceleași principii — automatizare, sisteme inteligente, procese care rulează fără intervenție — și le-am adaptat pentru afaceri care funcționează cu 2-10 oameni. Clinici, magazine, firme de construcții, servicii de închiriere. Afaceri reale, cu probleme reale, care până acum nu aveau acces la tehnologia asta."}
                 </p>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function Despre() {
                     fontSize: "1.5rem", fontWeight: 700, color: "var(--text)",
                     lineHeight: 1.4, letterSpacing: "-0.01em",
                   }}>
-                    {"\u201CDacă o mașină poate face treaba, lasă mașina să facă treaba.\u201D"}
+                    {"\u201CNu vindem AI ca buzzword. Vindem ore înapoi. Fiecare automatizare pe care o construim pleacă de la o întrebare simplă: ce faci azi de 10 ori care nu ar trebui să existe mâine?\u201D"}
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Despre() {
               <h3 style={{ fontSize: "1.4rem", fontWeight: 600, letterSpacing: "-0.01em" }}>Cosmin</h3>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--coral)", marginTop: "0.3rem" }}>Fondator</p>
               <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                {"Strategie, vânzări, și viziunea produsului. Vorbește cu fiecare client personal."}
+                {"7 ani în tech, marketing și strategie de produs. Am lansat produse, am crescut echipe, și am construit sisteme de automatizare înainte să fie la modă. Vorbesc cu fiecare client personal pentru că nu poți automatiza ce nu înțelegi."}
               </p>
             </div>
             <div className="pain-card" style={{ textAlign: "center", padding: "2.5rem" }}>
@@ -108,7 +108,7 @@ export default function Despre() {
               <h3 style={{ fontSize: "1.4rem", fontWeight: 600, letterSpacing: "-0.01em" }}>{"Agenți AI"}</h3>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--coral)", marginTop: "0.3rem" }}>Echipa tehnică</p>
               <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                {"Construcție, implementare, monitorizare. Lucrează 24/7, nu au nevoie de cafea."}
+                {"Aceiași agenți AI pe care îi folosim pentru clienți rulează și în Praxis. Monitorizare, research, rapoarte, comunicare — non-stop. Dacă ne întrebi cum știm că funcționează, răspunsul e: pentru că noi trăim pe ele în fiecare zi."}
               </p>
             </div>
           </div>
@@ -127,22 +127,22 @@ export default function Despre() {
             {[
               {
                 title: "Începem cu ascultare, nu cu vânzare",
-                desc: "Fiecare afacere e diferită. De asta primele 15 minute sunt despre tine, nu despre noi.",
+                desc: "Nu venim cu o prezentare. Venim cu întrebări. Primele 15 minute sunt despre cum arată ziua ta, nu despre ce vindem noi.",
                 icon: "hearing",
               },
               {
                 title: "Construim pe ce ai deja",
-                desc: "Folosești WhatsApp și Excel? Perfect. Automatizările se integrează în ce știi deja.",
+                desc: "Nu te forțăm pe platforme noi. Dacă echipa ta știe WhatsApp și Excel, automatizările noastre se lipesc direct pe ele.",
                 icon: "extension",
               },
               {
                 title: "Măsurăm totul",
-                desc: "Fiecare automatizare vine cu numere concrete: ore câștigate, mesaje eliminate, bani recuperați.",
+                desc: "Nu livrăm «soluții». Livrăm numere: 3 ore câștigate pe zi, 14% mai puține anulări, 30 de minute în loc de 4 ore. Dacă nu putem măsura, nu construim.",
                 icon: "analytics",
               },
               {
                 title: "Rămânem după implementare",
-                desc: "Nu construim și plecăm. Monitorizăm, optimizăm, și adăugăm funcționalități pe măsură ce crești.",
+                desc: "Majoritatea firmelor construiesc, facturează, și dispar. Noi monitorizăm lunar, reparăm ce se strică, și adăugăm funcționalități noi fără să te taxăm pentru fiecare conversație.",
                 icon: "handshake",
               },
             ].map((v) => (
