@@ -32,7 +32,7 @@ export default function Home() {
             <p className="hero-sub">Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi — tu te ocupi de afacere, ele lucrează non-stop.</p>
             <div className="hero-buttons">
               <Link className="btn-primary" href="/contact">Hai să vorbim</Link>
-              <Link className="btn-ghost" href="/cum-functioneaza">Vezi cum funcționează</Link>
+              <Link className="btn-ghost" href="/proces">Vezi cum funcționează</Link>
             </div>
             <div className="hero-stats">
               <span><span className="hero-stat-num">15+</span> <span className="hero-stat-label">ore câștigate / săptămână</span></span>

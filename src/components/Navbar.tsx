@@ -14,7 +14,7 @@ export function Navbar() {
         <Link href="/" className="nav-logo">Praxis</Link>
         <div className="nav-links">
           <Link href="/solutii">Soluții</Link>
-          <Link href="/cum-functioneaza">Proces</Link>
+          <Link href="/proces">Proces</Link>
           <Link href="/despre">Despre noi</Link>
           <Link href="/faq">FAQ</Link>
         </div>
@@ -82,7 +82,7 @@ export function Navbar() {
               color: "var(--text-secondary)", textDecoration: "none",
               borderBottom: "1px solid var(--border)",
             }}>Soluții</Link>
-            <Link href="/cum-functioneaza" onClick={closeMenu} style={{
+            <Link href="/proces" onClick={closeMenu} style={{
               padding: "0.8rem 0", fontSize: "0.95rem", fontWeight: 500,
               color: "var(--text-secondary)", textDecoration: "none",
               borderBottom: "1px solid var(--border)",
