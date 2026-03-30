@@ -11,9 +11,7 @@ export function Navbar() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <Link href="/" className="nav-logo" style={{ display: "flex", alignItems: "center" }}>
-          <img src="/brand/mantl-logo-light.svg" alt="Mantl" style={{ height: "28px" }} />
-        </Link>
+        <Link href="/" className="nav-logo">Mantl</Link>
         <div className="nav-links">
           <Link href="/solutii">Soluții</Link>
           <Link href="/proces">Proces</Link>
