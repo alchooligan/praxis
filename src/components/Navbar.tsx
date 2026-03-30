@@ -15,9 +15,8 @@ export function Navbar() {
         <div className="nav-links">
           <Link href="/solutii">Soluții</Link>
           <Link href="/cum-functioneaza">Proces</Link>
-          <Link href="/despre">Despre</Link>
+          <Link href="/despre">Despre noi</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/contact">Contact</Link>
         </div>
 
         {/* Hamburger button - mobile only */}
@@ -92,16 +91,11 @@ export function Navbar() {
               padding: "0.8rem 0", fontSize: "0.95rem", fontWeight: 500,
               color: "var(--text-secondary)", textDecoration: "none",
               borderBottom: "1px solid var(--border)",
-            }}>Despre</Link>
+            }}>Despre noi</Link>
             <Link href="/faq" onClick={closeMenu} style={{
               padding: "0.8rem 0", fontSize: "0.95rem", fontWeight: 500,
               color: "var(--text-secondary)", textDecoration: "none",
-              borderBottom: "1px solid var(--border)",
             }}>FAQ</Link>
-            <Link href="/contact" onClick={closeMenu} style={{
-              padding: "0.8rem 0", fontSize: "0.95rem", fontWeight: 500,
-              color: "var(--text-secondary)", textDecoration: "none",
-            }}>Contact</Link>
             <Link href="/contact" onClick={closeMenu} className="btn-nav" style={{
               marginTop: "0.8rem", textAlign: "center",
             }}>Consultație gratuită</Link>
