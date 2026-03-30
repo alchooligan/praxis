@@ -6,26 +6,18 @@ export default function CumFunctioneaza() {
       {/* Hero */}
       <section className="section" style={{ background: "var(--surface)", paddingTop: "8rem", paddingBottom: "4rem" }}>
         <div className="section-inner" style={{ maxWidth: "800px", textAlign: "center" }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "0.5rem",
-            padding: "0.4rem 1rem", borderRadius: "100px",
-            background: "var(--blue-50)", border: "1px solid var(--blue-10)", marginBottom: "2rem",
-          }}>
-            <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "16px" }}>lightbulb</span>
-            <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)" }}>Proces</span>
-          </div>
           <h1 style={{
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
           }}>
             Nu schimbăm nimic din ce faci.{" "}
-Doar eliminăm partea pe care o urăști.
+            <span style={{ color: "var(--blue)" }}>Doar eliminăm partea pe care o urăști.</span>
           </h1>
           <p style={{
             marginTop: "1.5rem", fontSize: "1.1rem", color: "var(--text-secondary)",
             lineHeight: 1.7, maxWidth: "640px", marginLeft: "auto", marginRight: "auto", fontWeight: 400,
           }}>
-            Nu instalăm software complicat. Nu îți schimbăm felul în care lucrezi. Integrăm automatizări în exact aplicațiile pe care le folosești deja.
+            Arată-ne o zi din viața afacerii tale. Îți arătăm cum arată fără munca repetitivă.
           </p>
         </div>
       </section>
@@ -133,7 +125,7 @@ automatizată
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               Și asta e doar{" "}
-              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>începutul</span>
+începutul
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
               Nu doar mesaje și programări. Automatizăm lucruri care în mod normal necesită departamente întregi.
@@ -212,7 +204,7 @@ automatizată
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               Procesul, pas cu{" "}
-              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>pas</span>
+pas
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>

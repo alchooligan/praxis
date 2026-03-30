@@ -6,14 +6,6 @@ export default function Despre() {
       {/* Hero */}
       <section className="section" style={{ background: "var(--surface)", paddingTop: "8rem", paddingBottom: "4rem" }}>
         <div className="section-inner" style={{ maxWidth: "800px" }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "0.5rem",
-            padding: "0.4rem 1rem", borderRadius: "100px",
-            background: "var(--blue-50)", border: "1px solid var(--blue-10)", marginBottom: "2rem",
-          }}>
-            <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "16px" }}>info</span>
-            <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)" }}>Cine suntem</span>
-          </div>
           <h1 style={{
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
