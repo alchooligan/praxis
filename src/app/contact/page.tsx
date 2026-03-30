@@ -28,7 +28,7 @@ export default function Contact() {
       </section>
 
       {/* WhatsApp CTA */}
-      <section className="section" style={{ background: "var(--white)", paddingTop: "0", paddingBottom: "2rem" }}>
+      <section className="section" style={{ background: "var(--white)", paddingTop: "2rem", paddingBottom: "2rem" }}>
         <div className="section-inner" style={{ maxWidth: "700px" }}>
           <div className="pain-card" style={{ padding: "3rem", textAlign: "center" }}>
             <div style={{
@@ -45,7 +45,7 @@ export default function Contact() {
               Răspundem în câteva ore. Spune-ne cu ce se ocupă afacerea ta și ce te frustrează cel mai tare.
             </p>
             <a
-              href="https://wa.me/4073971703?text=Bun%C4%83%2C%20a%C8%99%20vrea%20s%C4%83%20aflu%20mai%20multe%20despre%20automatiz%C4%83ri%20pentru%20afacerea%20mea."
+              href="https://wa.me/40773971703?text=Bun%C4%83%2C%20a%C8%99%20vrea%20s%C4%83%20aflu%20mai%20multe%20despre%20automatiz%C4%83ri%20pentru%20afacerea%20mea."
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -89,6 +89,10 @@ export default function Contact() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const form = e.target as HTMLFormElement;
+                  const data = new FormData(form);
+                  const body = `Nume: ${data.get("name")}\nEmail: ${data.get("email")}\nTelefon: ${data.get("phone")}\nAfacere: ${data.get("business")}\nFrustrare: ${data.get("frustration")}`;
+                  window.open(`mailto:bitseeker07@gmail.com?subject=Praxis%20-%20Contact%20nou&body=${encodeURIComponent(body)}`);
                   setSubmitted(true);
                 }}
                 style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
@@ -97,6 +101,7 @@ export default function Contact() {
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Nume</label>
                     <input
+                      name="name"
                       type="text"
                       required
                       placeholder="Numele tău"
@@ -110,6 +115,7 @@ export default function Contact() {
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Email</label>
                     <input
+                      name="email"
                       type="email"
                       required
                       placeholder="email@exemplu.ro"
@@ -126,6 +132,7 @@ export default function Contact() {
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Telefon</label>
                     <input
+                      name="phone"
                       type="tel"
                       placeholder="07xx xxx xxx"
                       style={{
@@ -138,6 +145,7 @@ export default function Contact() {
                   <div>
                     <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Cu ce se ocupă afacerea ta?</label>
                     <input
+                      name="business"
                       type="text"
                       placeholder="ex: salon de înfrumusețare, clinică dentară, magazin online..."
                       style={{
@@ -154,6 +162,7 @@ export default function Contact() {
                     {"Care e cea mai mare frustrare din afacerea ta?"}
                   </label>
                   <textarea
+                    name="frustration"
                     rows={4}
                     placeholder="Spune-ne ce te ține treaz noaptea..."
                     style={{
