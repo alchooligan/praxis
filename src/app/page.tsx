@@ -155,7 +155,7 @@ export default function Home() {
 
       {/* Pain Points */}
       <section className="section reveal" style={{ background: "var(--white)" }}>
-        <div className="section-inner">
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <h2 className="section-title">Te recunoști?</h2>
           <div className="pain-grid">
             {[

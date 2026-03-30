@@ -69,7 +69,7 @@ export default function FAQ() {
 
       {/* FAQ Accordion */}
       <section className="section" style={{ background: "var(--white)" }}>
-        <div className="section-inner" style={{ maxWidth: "800px" }}>
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             {faqs.map((faq, i) => (
               <div

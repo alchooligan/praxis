@@ -93,7 +93,7 @@ export default function Solutii() {
 
       {/* Accordion Industries */}
       <section className="section" style={{ background: "var(--white)" }}>
-        <div className="section-inner" style={{ maxWidth: "800px" }}>
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
             {industries.map((ind) => {
               const isOpen = openId === ind.id;

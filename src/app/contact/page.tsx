@@ -6,7 +6,7 @@ export default function Contact() {
     <>
       {/* Hero */}
       <section className="section" style={{ background: "var(--surface)", paddingTop: "8rem", paddingBottom: "4rem" }}>
-        <div className="section-inner" style={{ maxWidth: "700px", textAlign: "center" }}>
+        <div className="section-inner" style={{ maxWidth: "800px", textAlign: "center" }}>
           <h1 style={{
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
@@ -24,17 +24,17 @@ export default function Contact() {
 
       {/* WhatsApp CTA */}
       <section className="section" style={{ background: "var(--white)", paddingTop: "2rem", paddingBottom: "2rem" }}>
-        <div className="section-inner" style={{ maxWidth: "700px" }}>
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div className="pain-card" style={{ padding: "3rem", textAlign: "center" }}>
             <div style={{
               width: "64px", height: "64px", borderRadius: "18px",
-              margin: "0 auto 1.5rem", background: "#25D366",
+              margin: "0 auto 1.5rem", background: "var(--blue)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               <span className="material-symbols-outlined" style={{ color: "#fff", fontSize: "28px" }}>chat</span>
             </div>
             <h2 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>
-              Scrie-ne direct pe WhatsApp
+              Scrie-ne un mesaj
             </h2>
             <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "1.5rem", maxWidth: "400px", marginLeft: "auto", marginRight: "auto" }}>
               Răspundem în câteva ore. Spune-ne cu ce se ocupă afacerea ta și ce te frustrează cel mai tare.
@@ -45,14 +45,14 @@ export default function Contact() {
               rel="noopener noreferrer"
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                background: "#25D366", color: "#fff",
+                background: "var(--blue)", color: "#fff",
                 padding: "1rem 2.4rem", borderRadius: "100px",
                 fontSize: "0.9rem", fontWeight: 700, textDecoration: "none",
                 transition: "all 0.3s", letterSpacing: "0.02em",
               }}
             >
-              <span className="material-symbols-outlined" style={{ color: "#fff", fontSize: "20px" }}>chat</span>
-              Deschide WhatsApp
+              <span className="material-symbols-outlined" style={{ color: "#fff", fontSize: "20px" }}>send</span>
+              Trimite mesaj
             </a>
           </div>
         </div>

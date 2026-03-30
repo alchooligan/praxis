@@ -24,7 +24,7 @@ export default function CumFunctioneaza() {
 
       {/* Timeline — A Single Day */}
       <section className="section" style={{ background: "var(--white)" }}>
-        <div className="section-inner" style={{ maxWidth: "700px" }}>
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               O zi din afacerea ta,{" "}
