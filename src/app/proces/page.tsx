@@ -198,7 +198,7 @@ export default function CumFunctioneaza() {
       {/* 3-step process */}
       <section className="section" style={{ background: "var(--surface)" }}>
         <div className="section-inner" style={{ maxWidth: "1000px" }}>
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+          <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               Procesul, pas cu{" "}
               <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>pas</span>
@@ -222,7 +222,7 @@ export default function CumFunctioneaza() {
                 desc: "Construim, testăm, și lansăm. Dacă știi să folosești WhatsApp, ești gata. Noi monitorizăm și reparăm ce trebuie.",
               },
             ].map((s) => (
-              <div key={s.num} style={{ textAlign: "center" }}>
+              <div key={s.num}>
                 <div style={{
                   fontSize: "3.5rem", fontWeight: 700, color: "var(--blue-10)",
                   lineHeight: 1, marginBottom: "0.75rem", letterSpacing: "-0.04em",
