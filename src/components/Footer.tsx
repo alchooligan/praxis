@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <div className="footer-brand">Lucro</div>
+          <div className="footer-brand">Mantl</div>
           <p className="footer-desc">Automatizăm munca repetitivă din afacerile mici și medii.</p>
         </div>
         <div className="footer-col">
@@ -28,7 +28,7 @@ export function Footer() {
           <Link href="#">GDPR</Link>
         </div>
       </div>
-      <div className="footer-bottom">&copy; 2026 Lucro. Toate drepturile rezervate.</div>
+      <div className="footer-bottom">&copy; 2026 Mantl. Toate drepturile rezervate.</div>
     </footer>
   );
 }
