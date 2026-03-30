@@ -108,7 +108,7 @@ export default function Home() {
                     transition: "all 0.3s",
                   }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem" }}>
-                      {/* Praxis icon with badge */}
+                      {/* Lucro icon with badge */}
                       <div style={{ position: "relative", flexShrink: 0 }}>
                         <div style={{
                           width: "20px", height: "20px", background: "var(--blue)", borderRadius: "5px",
@@ -124,7 +124,7 @@ export default function Home() {
                           }} />
                         )}
                       </div>
-                      <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "rgba(255,255,255,0.7)", flex: 1 }}>PRAXIS</span>
+                      <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "rgba(255,255,255,0.7)", flex: 1 }}>LUCRO</span>
                       <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.4)" }}>{notif.time}</span>
                     </div>
                     <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.45, margin: 0 }}>{notif.text}</p>
