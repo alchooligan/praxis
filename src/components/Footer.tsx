@@ -3,32 +3,22 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-grid">
-        <div>
-          <div className="footer-brand">Mantl</div>
-          <p className="footer-desc">Automatizăm munca repetitivă din afacerile mici și medii.</p>
+      <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
+        <div className="footer-brand" style={{ fontSize: "1.6rem", marginBottom: "0.6rem" }}>Mantl</div>
+        <p className="footer-desc" style={{ fontSize: "1rem", marginBottom: "2.5rem" }}>Automatizăm munca repetitivă din afacerile mici și medii.</p>
+
+        <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+          <Link href="/despre" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Despre noi</Link>
+          <Link href="/solutii" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Soluții</Link>
+          <Link href="/proces" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Proces</Link>
+          <Link href="/faq" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Întrebări frecvente</Link>
+          <Link href="/contact" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Contact</Link>
         </div>
-        <div className="footer-col">
-          <h5>Companie</h5>
-          <Link href="/despre">Despre noi</Link>
-          <Link href="/solutii">Soluții</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-        <div className="footer-col">
-          <h5>Resurse</h5>
-          <Link href="/proces">Cum funcționează</Link>
-          <Link href="/faq">Întrebări frecvente</Link>
-          <Link href="#">Blog (în curând)</Link>
-          <Link href="#">Newsletter (în curând)</Link>
-        </div>
-        <div className="footer-col">
-          <h5>Legal</h5>
-          <Link href="#">Termeni și Condiții</Link>
-          <Link href="#">Politică Cookies</Link>
-          <Link href="#">GDPR</Link>
+
+        <div className="footer-bottom" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>
+          &copy; 2026 Mantl. Toate drepturile rezervate.
         </div>
       </div>
-      <div className="footer-bottom">&copy; 2026 Mantl. Toate drepturile rezervate.</div>
     </footer>
   );
 }
