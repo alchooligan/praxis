@@ -98,11 +98,8 @@ export default function CumFunctioneaza() {
                     <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: item.color }} />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.4rem" }}>
-                      <span style={{ fontSize: "0.75rem", fontWeight: 700, color: item.color, fontVariantNumeric: "tabular-nums", width: "36px", flexShrink: 0 }}>{item.time}</span>
-                      <span className="material-symbols-outlined" style={{ color: item.color, fontSize: "18px" }}>{item.icon}</span>
-                    </div>
-                    <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text)", marginBottom: "0.4rem", letterSpacing: "-0.01em" }}>{item.title}</h3>
+                    <span style={{ fontSize: "0.7rem", fontWeight: 700, color: item.color, fontVariantNumeric: "tabular-nums", letterSpacing: "0.04em" }}>{item.time}</span>
+                    <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text)", marginTop: "0.3rem", marginBottom: "0.4rem", letterSpacing: "-0.01em" }}>{item.title}</h3>
                     <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
                 </div>
