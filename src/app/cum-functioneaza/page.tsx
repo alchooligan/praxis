@@ -18,102 +18,116 @@ export default function CumFunctioneaza() {
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
           }}>
-            {"Cum transform\u0103m orele pierdute \u00een sisteme care lucreaz\u0103 "}
+            Cum transformăm orele pierdute în sisteme care lucrează{" "}
             <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>singure</span>
           </h1>
           <p style={{
             marginTop: "1.5rem", fontSize: "1.1rem", color: "var(--text-secondary)",
             lineHeight: 1.7, maxWidth: "640px", marginLeft: "auto", marginRight: "auto", fontWeight: 400,
           }}>
-            {"Nu instal\u0103m software complicat. Nu \u00ee\u021bi schimb\u0103m felul \u00een care lucrezi. Integr\u0103m automatiz\u0103ri \u00een exact aplica\u021biile pe care le folose\u0219ti deja."}
+            Nu instalăm software complicat. Nu îți schimbăm felul în care lucrezi. Integrăm automatizări în exact aplicațiile pe care le folosești deja.
           </p>
         </div>
       </section>
 
-      {/* Before/After examples */}
+      {/* A Single Day — Timeline */}
       <section className="section" style={{ background: "var(--white)" }}>
-        <div className="section-inner" style={{ maxWidth: "1000px" }}>
+        <div className="section-inner" style={{ maxWidth: "700px" }}>
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
-              {"Ce \u00eenseamn\u0103 automatizare, "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>concret?</span>
+              O zi din afacerea ta,{" "}
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizată</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
-              {"Nu teorie, nu jargon. Doar mar\u021bi-ul t\u0103u \u2014 \u00eenainte \u0219i dup\u0103."}
+              Cum arată marți-ul tău când sistemele lucrează pentru tine.
             </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            {[
-              {
-                title: "Programări",
-                icon: "calendar_month",
-                before: "Clientul sună — tu răspunzi — verifici disponibilitatea — notezi în calendar — confirmi verbal — uiți să trimiți reminder — clientul nu vine.",
-                after: "Clientul trimite mesaj — sistemul vede calendarul — propune ore libere — confirmă automat — trimite reminder cu 24h înainte — la anulare, următorul de pe listă primește mesaj.",
-              },
-              {
-                title: "Comenzi și tracking",
-                icon: "local_shipping",
-                before: "Clientul întreabă 'unde e comanda?' — tu cauți în Excel — verifici la curier — scrii răspunsul manual — trimiți pe WhatsApp.",
-                after: "Clientul întreabă — sistemul verifică automat statusul — răspunde instant cu linkul de tracking. Tu nu vezi nimic din asta.",
-              },
-              {
-                title: "Facturare și urmărire plăți",
-                icon: "receipt_long",
-                before: "Termini lucrul — uiți să facturezi — factura pleacă cu 3 zile întârziere — clientul plătește cu 30 — nu știi cine datorează ce.",
-                after: "Lucrul se termină — factura se generează automat — se trimite instant — la scadență, reminder automat — tu vezi un tabel cu cine a plătit și cine nu.",
-              },
-              {
-                title: "Comunicare cu clienții",
-                icon: "forum",
-                before: "Clientul trimite mesaj pe WhatsApp — tu citești — răspunzi manual — notezi într-un Excel — uiți să facturezi.",
-                after: "Clientul trimite mesaj — sistemul înțelege ce vrea — răspunde automat — actualizează baza de date — generează factura.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="pain-card" style={{ padding: 0, overflow: "hidden" }}>
-                <div style={{
-                  padding: "1.5rem 2.5rem", borderBottom: "1px solid var(--border)",
-                  background: "var(--surface)", display: "flex", alignItems: "center", gap: "1rem",
-                }}>
-                  <div className="pain-icon" style={{ marginBottom: 0, width: "40px", height: "40px", borderRadius: "12px" }}>
-                    <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "20px" }}>{item.icon}</span>
+          <div style={{ position: "relative", paddingLeft: "3rem" }}>
+            {/* Vertical line */}
+            <div style={{
+              position: "absolute", left: "11px", top: "8px", bottom: "8px",
+              width: "2px", background: "linear-gradient(to bottom, var(--blue), var(--blue-20), var(--border))",
+              borderRadius: "2px",
+            }} />
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
+              {[
+                {
+                  time: "08:00",
+                  title: "Client trimite mesaj pe WhatsApp",
+                  desc: "\"Bună, mai aveți locuri mâine?\" — Sistemul citește mesajul, verifică calendarul, și răspunde cu orele libere. Tu nu vezi nimic.",
+                  icon: "chat",
+                  color: "#25D366",
+                },
+                {
+                  time: "09:15",
+                  title: "Programare confirmată automat",
+                  desc: "Clientul a ales ora 14:00. Calendarul e actualizat, reminder-ul programat cu 24h înainte. Dacă anulează, următorul de pe lista de așteptare primește mesaj.",
+                  icon: "event_available",
+                  color: "var(--blue)",
+                },
+                {
+                  time: "11:30",
+                  title: "Factură generată și trimisă",
+                  desc: "Serviciul de ieri s-a terminat. Factura pleacă automat pe email, cu reminder la scadență. Tu vezi doar cine a plătit și cine nu.",
+                  icon: "receipt_long",
+                  color: "#f59e0b",
+                },
+                {
+                  time: "14:00",
+                  title: "Cerere recenzie Google trimisă",
+                  desc: "La 24h după vizita de ieri, clientul primește un mesaj scurt cu link direct. De la 47 la 130+ recenzii — fără să ceri manual.",
+                  icon: "star",
+                  color: "#f59e0b",
+                },
+                {
+                  time: "16:00",
+                  title: "Raport zilnic generat",
+                  desc: "Câte comenzi, câți clienți noi, ce s-a refuzat, cât profit. Totul pe Telegram sau în Google Sheet. Numerele sunt acolo — tu doar le citești.",
+                  icon: "analytics",
+                  color: "var(--blue)",
+                },
+                {
+                  time: "18:00",
+                  title: "Tu verifici telefonul. Totul e făcut.",
+                  desc: "Fără Excel, fără mesaje copiate, fără facturi uitate. Afacerea a rulat singură toată ziua.",
+                  icon: "self_improvement",
+                  color: "#22c55e",
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ position: "relative", display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
+                  {/* Dot on timeline */}
+                  <div style={{
+                    position: "absolute", left: "-3rem",
+                    width: "24px", height: "24px", borderRadius: "50%",
+                    background: "var(--white)", border: `2.5px solid ${item.color}`,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    zIndex: 2, marginTop: "2px",
+                  }}>
+                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: item.color }} />
                   </div>
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 600, letterSpacing: "-0.01em" }}>{item.title}</h3>
-                </div>
-                <div className="grid-2" style={{ gap: 0 }}>
-                  <div style={{ padding: "2rem 2.5rem", borderRight: "1px solid var(--border)" }}>
-                    <div style={{
-                      display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                      padding: "0.25rem 0.75rem", borderRadius: "100px",
-                      background: "rgba(239,68,68,0.06)", marginBottom: "1rem",
-                    }}>
-                      <span className="material-symbols-outlined" style={{ color: "#ef4444", fontSize: "14px" }}>close</span>
-                      <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#ef4444" }}>Azi</span>
+
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.4rem" }}>
+                      <span style={{ fontSize: "0.75rem", fontWeight: 700, color: item.color, fontVariantNumeric: "tabular-nums" }}>{item.time}</span>
+                      <span className="material-symbols-outlined" style={{ color: item.color, fontSize: "18px" }}>{item.icon}</span>
                     </div>
-                    <p style={{ color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6, fontWeight: 500 }}>{item.before}</p>
-                  </div>
-                  <div style={{ padding: "2rem 2.5rem" }}>
-                    <div style={{
-                      display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                      padding: "0.25rem 0.75rem", borderRadius: "100px",
-                      background: "var(--blue-50)", marginBottom: "1rem",
-                    }}>
-                      <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "14px" }}>check</span>
-                      <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--blue)" }}>Cu Praxis</span>
-                    </div>
-                    <p style={{ color: "var(--text)", fontSize: "0.92rem", lineHeight: 1.6, fontWeight: 500 }}>{item.after}</p>
+                    <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text)", marginBottom: "0.4rem", letterSpacing: "-0.01em" }}>{item.title}</h3>
+                    <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Tools */}
+      {/* Ce folosim — KEPT AS IS */}
       <section className="section" style={{ background: "var(--surface)" }}>
         <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <h2 className="section-title">
-              {"Ce "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>folosim?</span>
+              Ce <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>folosim?</span>
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
@@ -139,93 +153,124 @@ export default function CumFunctioneaza() {
             marginTop: "2.5rem", textAlign: "center", color: "var(--text-secondary)",
             fontWeight: 400, fontSize: "1.05rem", lineHeight: 1.7, maxWidth: "640px", marginLeft: "auto", marginRight: "auto",
           }}>
-            {"Nu trebuie să înțelegi cum funcționează. Trebuie doar să știi că funcționează — și noi îți arătăm în primele 15 minute."}
+            Nu trebuie să înțelegi cum funcționează. Trebuie doar să știi că funcționează — și noi îți arătăm în primele 15 minute.
           </p>
         </div>
       </section>
 
-      {/* What we DON'T do */}
+      {/* Advanced Capabilities */}
       <section className="section" style={{ background: "var(--white)" }}>
         <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
-              {"Ce "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>NU</span>{" facem"}
+              Dincolo de{" "}
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>bază</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
-              {"Iată ce nu vei găsi la noi."}
+              Nu doar email și calendar. Automatizăm lucruri care în mod normal necesită departamente întregi.
             </p>
           </div>
-          <div className="pain-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
             {[
-              { text: "Nu promitem că AI-ul înlocuiește oamenii. Îi eliberează să facă treaba care contează.", icon: "smart_toy" },
-              { text: "Nu forțăm tool-uri noi. Lucrăm cu ce ai deja.", icon: "build" },
-              { text: "Nu vindem pachete generice. Fiecare automatizare e construită specific pe afacerea ta.", icon: "inventory_2" },
-              { text: "Nu dispărem după implementare. Monitorizăm și optimizăm lunar.", icon: "support_agent" },
+              {
+                icon: "ads_click",
+                title: "Google & Facebook Ads",
+                desc: "AI-ul monitorizează performanța zilnic, rescrie reclamele slabe, ajustează bugetele și semnalează risipa.",
+              },
+              {
+                icon: "image",
+                title: "Imagini & Video AI",
+                desc: "Vizualuri de marketing, poze de produs, conținut video scurt — la scară, fără designeri, fără agenții.",
+              },
+              {
+                icon: "outgoing_mail",
+                title: "Outreach & Lead Generation",
+                desc: "Pipeline automat: cercetare prospecți, email personalizat, follow-up programat, raport cu ce convertește.",
+              },
+              {
+                icon: "edit_note",
+                title: "Conținut la scară",
+                desc: "Articole blog, postări social media, newslettere, descrieri produse — în vocea ta, optimizate SEO, publicate pe program.",
+              },
+              {
+                icon: "manage_search",
+                title: "Monitorizare competiție",
+                desc: "Urmărire zilnică a competitorilor — prețuri, conținut nou, lansări produse, recenzii. Digest livrat dimineața.",
+              },
+              {
+                icon: "inventory_2",
+                title: "Operațiuni & Rapoarte",
+                desc: "Dashboard-uri automate, alerte stoc, procesare facturi, automatizări workflow — operațiunile tale rulează singure.",
+              },
             ].map((item) => (
-              <div key={item.icon} className="pain-card" style={{ display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
-                <div style={{
-                  width: "40px", height: "40px", borderRadius: "12px", flexShrink: 0,
-                  background: "rgba(239,68,68,0.05)", display: "flex", alignItems: "center", justifyContent: "center",
-                }}>
-                  <span className="material-symbols-outlined" style={{ color: "#ef4444", fontSize: "20px" }}>{item.icon}</span>
+              <div key={item.icon} className="pain-card">
+                <div className="pain-icon">
+                  <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "22px" }}>{item.icon}</span>
                 </div>
-                <p style={{ color: "var(--text)", fontWeight: 500, lineHeight: 1.6, fontSize: "0.95rem" }}>{item.text}</p>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Detailed process */}
-      <section className="section" style={{ background: "var(--surface)" }}>
+      {/* What we DON'T do — compact list */}
+      <section className="section" style={{ background: "var(--surface)", paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <div className="section-inner" style={{ maxWidth: "700px" }}>
+          <h2 className="section-title" style={{ marginBottom: "2rem" }}>
+            Ce <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>NU</span> facem
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            {[
+              "Nu promitem că AI-ul înlocuiește oamenii. Îi eliberează să facă treaba care contează.",
+              "Nu forțăm tool-uri noi. Lucrăm cu ce ai deja.",
+              "Nu vindem pachete generice. Fiecare automatizare e construită specific pe afacerea ta.",
+              "Nu dispărem după implementare. Monitorizăm și optimizăm lunar.",
+            ].map((text, i) => (
+              <div key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
+                <span className="material-symbols-outlined" style={{ color: "#ef4444", fontSize: "20px", marginTop: "2px", flexShrink: 0 }}>close</span>
+                <p style={{ color: "var(--text)", fontWeight: 500, fontSize: "0.95rem", lineHeight: 1.6 }}>{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Simple 3-step process */}
+      <section className="section" style={{ background: "var(--white)" }}>
         <div className="section-inner" style={{ maxWidth: "1000px" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <h2 className="section-title">
-              {"Procesul, pas cu "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>pas</span>
+              Procesul, pas cu{" "}
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>pas</span>
             </h2>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
             {[
               {
                 num: "01",
-                title: "Consultație gratuită (15 min)",
-                text: "Ne spui cum lucrezi azi. Ce durează mult, ce te frustrează, unde pierzi timp. Noi identificăm 2-3 lucruri pe care le putem automatiza imediat.",
-                icon: "hearing",
+                title: "Consultație gratuită",
+                desc: "15 minute. Ne spui cum lucrezi, ce durează mult, unde pierzi timp. Noi identificăm ce putem automatiza imediat.",
               },
               {
                 num: "02",
-                title: "Propunere concretă",
-                text: "Primești un document cu: ce automatizăm, cum funcționează, cât durează, și ce rezultate estimăm. Prețul e fix, fără surprize.",
-                icon: "description",
+                title: "Propunere cu preț fix",
+                desc: "Primești un document clar: ce automatizăm, cum funcționează, cât durează, ce rezultate estimăm. Fără surprize.",
               },
               {
                 num: "03",
-                title: "Implementare (1 zi — 3 săptămâni)",
-                text: "Construim, testăm, și implementăm. Îți arătăm cum funcționează totul. Nu trebuie să fii tehnic — dacă știi să folosești WhatsApp, ești gata.",
-                icon: "rocket_launch",
-              },
-              {
-                num: "04",
-                title: "Funcționează. Tu te relaxezi.",
-                text: "Sistemele rulează singure. Dacă ceva se strică, noi reparăm. Dacă vrei mai mult, construim mai mult.",
-                icon: "self_improvement",
+                title: "Implementare + monitorizare",
+                desc: "Construim, testăm, și lansăm. Dacă știi să folosești WhatsApp, ești gata. Noi monitorizăm și reparăm ce trebuie.",
               },
             ].map((s) => (
-              <div key={s.num} style={{ display: "flex", gap: "1.5rem", alignItems: "flex-start" }}>
+              <div key={s.num} style={{ textAlign: "center" }}>
                 <div style={{
-                  position: "relative", zIndex: 1, width: "56px", height: "56px", flexShrink: 0,
-                  borderRadius: "50%", background: "var(--white)", boxShadow: "0 8px 30px rgba(0,70,200,0.08)",
-                  border: "1px solid var(--blue-10)", display: "flex", alignItems: "center", justifyContent: "center",
-                }}>
-                  <span style={{ fontWeight: 700, color: "var(--blue)", fontSize: "1.1rem" }}>{s.num}</span>
-                </div>
-                <div className="pain-card" style={{ flex: 1 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
-                    <span className="material-symbols-outlined" style={{ color: "var(--blue)" }}>{s.icon}</span>
-                    <h3 style={{ fontSize: "1.2rem", fontWeight: 600, letterSpacing: "-0.01em" }}>{s.title}</h3>
-                  </div>
-                  <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.7 }}>{s.text}</p>
-                </div>
+                  fontSize: "3.5rem", fontWeight: 700, color: "var(--blue-10)",
+                  lineHeight: 1, marginBottom: "0.75rem", letterSpacing: "-0.04em",
+                }}>{s.num}</div>
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 600, marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>{s.title}</h3>
+                <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -235,10 +280,10 @@ export default function CumFunctioneaza() {
       {/* CTA */}
       <section className="cta-section">
         <div className="cta-box">
-          <h2>{"Sună complicat? "}<span>Nu e.</span></h2>
-          <p>{"Hai să vorbim 15 minute și îți arătăm exact ce putem face pentru afacerea ta."}</p>
+          <h2>Sună complicat? <span>Nu e.</span></h2>
+          <p>Hai să vorbim 15 minute și îți arătăm exact ce putem face pentru afacerea ta.</p>
           <Link href="/contact" className="btn-cta">
-            {"PROGRAMEAZĂ O CONSULTAȚIE GRATUITĂ"}
+            PROGRAMEAZĂ O CONSULTAȚIE GRATUITĂ
           </Link>
         </div>
       </section>
