@@ -1,11 +1,6 @@
-"use client";
-
-import { useState } from "react";
-
-
+import Link from "next/link";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
@@ -63,125 +58,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Form */}
-      <section className="section" style={{ background: "var(--white)" }}>
-        <div className="section-inner" style={{ maxWidth: "700px" }}>
-          <div className="pain-card" style={{ padding: "2.5rem 3rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
-              <span className="material-symbols-outlined" style={{ color: "var(--blue)" }}>edit_note</span>
-              <h2 style={{ fontSize: "1.4rem", fontWeight: 700, letterSpacing: "-0.01em" }}>{"Sau lasă-ne un mesaj"}</h2>
-            </div>
-
-            {submitted ? (
-              <div style={{ textAlign: "center", padding: "3rem 0" }}>
-                <div style={{
-                  width: "64px", height: "64px", margin: "0 auto 1.5rem", borderRadius: "50%",
-                  background: "var(--blue-50)", display: "flex", alignItems: "center", justifyContent: "center",
-                }}>
-                  <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "28px" }}>check_circle</span>
-                </div>
-                <h3 style={{ fontSize: "1.4rem", fontWeight: 700 }}>{"Mulțumim!"}</h3>
-                <p style={{ marginTop: "0.75rem", color: "var(--text-secondary)", fontSize: "1.05rem", lineHeight: 1.7 }}>
-                  {"Te contactăm în maximum 24 de ore. De obicei mult mai repede."}
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const form = e.target as HTMLFormElement;
-                  const data = new FormData(form);
-                  const body = `Nume: ${data.get("name")}\nEmail: ${data.get("email")}\nTelefon: ${data.get("phone")}\nAfacere: ${data.get("business")}\nFrustrare: ${data.get("frustration")}`;
-                  window.open(`mailto:bitseeker07@gmail.com?subject=Praxis%20-%20Contact%20nou&body=${encodeURIComponent(body)}`);
-                  setSubmitted(true);
-                }}
-                style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
-              >
-                <div className="grid-2">
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Nume</label>
-                    <input
-                      name="name"
-                      type="text"
-                      required
-                      placeholder="Numele tău"
-                      style={{
-                        width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
-                        padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
-                        outline: "none", fontFamily: "inherit", color: "var(--text)",
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Email</label>
-                    <input
-                      name="email"
-                      type="email"
-                      required
-                      placeholder="email@exemplu.ro"
-                      style={{
-                        width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
-                        padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
-                        outline: "none", fontFamily: "inherit", color: "var(--text)",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid-2">
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Telefon</label>
-                    <input
-                      name="phone"
-                      type="tel"
-                      placeholder="07xx xxx xxx"
-                      style={{
-                        width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
-                        padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
-                        outline: "none", fontFamily: "inherit", color: "var(--text)",
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>Cu ce se ocupă afacerea ta?</label>
-                    <input
-                      name="business"
-                      type="text"
-                      placeholder="ex: salon de înfrumusețare, clinică dentară, magazin online..."
-                      style={{
-                        width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
-                        padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
-                        outline: "none", fontFamily: "inherit", color: "var(--text)",
-                      }}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label style={{ display: "block", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", color: "var(--text)" }}>
-                    {"Care e cea mai mare frustrare din afacerea ta?"}
-                  </label>
-                  <textarea
-                    name="frustration"
-                    rows={4}
-                    placeholder="Spune-ne ce te ține treaz noaptea..."
-                    style={{
-                      width: "100%", border: "1px solid var(--border)", borderRadius: "0.75rem",
-                      padding: "0.85rem 1.25rem", fontSize: "0.9rem", background: "var(--white)",
-                      outline: "none", fontFamily: "inherit", color: "var(--text)", resize: "none",
-                    }}
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary" style={{ width: "100%", padding: "1rem 2.4rem", textAlign: "center" }}>
-                  TRIMITE MESAJUL
-                </button>
-              </form>
-            )}
-          </div>
-
-        </div>
-      </section>
     </>
   );
 }

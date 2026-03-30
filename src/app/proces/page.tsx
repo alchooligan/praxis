@@ -28,7 +28,7 @@ export default function CumFunctioneaza() {
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               O zi din afacerea ta,{" "}
-automatizată
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizată</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
               Cum arată marți-ul tău când sistemele lucrează pentru tine.
@@ -125,7 +125,7 @@ automatizată
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               Și asta e doar{" "}
-începutul
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>începutul</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
               Nu doar mesaje și programări. Automatizăm lucruri care în mod normal necesită departamente întregi.
@@ -204,7 +204,7 @@ automatizată
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               Procesul, pas cu{" "}
-pas
+              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>pas</span>
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem" }}>
