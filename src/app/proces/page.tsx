@@ -175,7 +175,7 @@ export default function CumFunctioneaza() {
 
       {/* Ce NU facem — right after capabilities */}
       <section className="section" style={{ background: "var(--white)", paddingTop: "4rem", paddingBottom: "4rem" }}>
-        <div className="section-inner" style={{ maxWidth: "700px" }}>
+        <div className="section-inner" style={{ maxWidth: "1000px" }}>
           <h2 className="section-title" style={{ marginBottom: "2rem" }}>
             Ce <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>NU</span> facem
           </h2>
