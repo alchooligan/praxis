@@ -284,13 +284,13 @@ export default function Home() {
           <div className="cases-header">
             <div>
               <h2 className="section-title">Rezultate reale.</h2>
-              <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>Automatizări implementate pentru afaceri din România.</p>
+              <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>Automatizări implementate pentru afaceri reale.</p>
             </div>
           </div>
           <div className="cases-grid">
             <div className="case-card">
               <div className="case-img">
-                <Image alt="Eco Ride electric scooters" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",transition:"transform 0.6s"}} src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFeMUVQb3QoXm_IGdp54-E6CX5kTrgoLLdE4Ays8Bi0WEWulX06yvyjRQWrD1I7cYb9EvjesQgBUzV0nabJbiRU88rFmSBD1GDCllXKgSfrxEYgbp3uw3NC17Z7SqM-dJHhS5lOpzHC_EQgdE9jWK6xe_yCuQExtYDYH1qH_J7GBzonXAoJ-a-mTDwAFlyjwjtP41ZPbgI0_QDpWrGp7yV7pTSfpnani0NcewPaxfZXxbmgDm6chtsrY_lHk9IJOMexB25IS097Vs" />
+                <Image alt="Eco Ride electric scooters" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover"}} src="/images/eco-ride.jpg" />
               </div>
               <div className="case-body">
                 <div className="case-tag">Logistică &amp; Mobilitate</div>
@@ -305,7 +305,7 @@ export default function Home() {
             </div>
             <div className="case-card">
               <div className="case-img">
-                <Image alt="Clinică dentară modernă" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover",transition:"transform 0.6s"}} src="https://lh3.googleusercontent.com/aida-public/AB6AXuALISmtAXLH6XK0dMzNH5NYzk9BmAHA6oCJcTtvdgbD8b7jI1mYil99oZXrXbspmTRLaO7j7dEF0wvtnar_TP5twPRNJABxMD_Pa-gs59cBd2HdELnn47wJtwdIW7-hIDc7UMAiQ8WIbTLnLdegh1HEti1O8ULN_VY7tWArIiB8EUmLSItXrd3lJKk-IEFx4rhHIKf-ExLsP8AHs2-aFKw0DstPvJ4aJS4M5-Pl35jqZ1C2ZyD4ONC3gkPhk5_IPeLOWNUSSyfi_9A" />
+                <Image alt="Clinică dentară modernă" width={800} height={520} loading="lazy" style={{width:"100%",height:"100%",objectFit:"cover"}} src="/images/clinica-dentara.jpg" />
               </div>
               <div className="case-body">
                 <div className="case-tag">Sănătate</div>
