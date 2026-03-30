@@ -12,14 +12,14 @@ export default function CumFunctioneaza() {
             background: "var(--blue-50)", border: "1px solid var(--blue-10)", marginBottom: "2rem",
           }}>
             <span className="material-symbols-outlined" style={{ color: "var(--blue)", fontSize: "16px" }}>lightbulb</span>
-            <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)" }}>Cum funcționează</span>
+            <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)" }}>Proces</span>
           </div>
           <h1 style={{
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
           }}>
             Nu schimbăm nimic din ce faci.{" "}
-            <span style={{ color: "var(--blue)" }}>Doar eliminăm partea pe care o urăști.</span>
+Doar eliminăm partea pe care o urăști.
           </h1>
           <p style={{
             marginTop: "1.5rem", fontSize: "1.1rem", color: "var(--text-secondary)",
@@ -36,7 +36,7 @@ export default function CumFunctioneaza() {
           <div style={{ marginBottom: "3.5rem" }}>
             <h2 className="section-title">
               O zi din afacerea ta,{" "}
-              <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizată</span>
+automatizată
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
               Cum arată marți-ul tău când sistemele lucrează pentru tine.
