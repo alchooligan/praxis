@@ -327,9 +327,8 @@ export default function Home() {
       {/* CTA */}
       <section className="cta-section">
         <div className="cta-box">
-          <h2>Fiecare afacere e diferită.<br />Hai să vorbim <span>15 minute.</span></h2>
-          <p>De aceea începem cu o conversație, nu cu un pachet standard. Îți analizăm afacerea gratuit și îți spunem exact ce putem automatiza și ce rezultate să aștepți.</p>
-          <Link href="/contact" className="btn-cta" style={{ background: "var(--blue)", color: "#fff" }}>Hai să vorbim</Link>
+          <h2>15 minute. Fără obligații.<br />Îți spunem exact ce poți <span>automatiza.</span></h2>
+          <Link href="/contact" className="btn-cta" style={{ background: "var(--blue)", color: "#fff" }}>Programează acum</Link>
         </div>
       </section>
     </>

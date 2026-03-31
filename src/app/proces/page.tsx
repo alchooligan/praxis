@@ -31,7 +31,7 @@ export default function CumFunctioneaza() {
               <span style={{ color: "var(--blue)", textTransform: "uppercase" }}>automatizată</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontWeight: 400, maxWidth: "520px" }}>
-              Cum arată marți-ul tău când sistemele lucrează pentru tine.
+              Cum arată o zi normală când sistemele lucrează pentru tine.
             </p>
           </div>
           <div style={{ position: "relative", paddingLeft: "3rem" }}>

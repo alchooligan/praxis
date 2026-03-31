@@ -12,6 +12,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mantl.ro"),
   title: "Mantl | Automatizare AI pentru Afaceri",
   description:
     "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ro_RO",
     siteName: "Mantl",
+    url: "https://mantl.ro",
     images: [
       {
         url: "/og-image.png",
