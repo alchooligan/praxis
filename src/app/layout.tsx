@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mantl.ro"),
-  title: "Mantl | Automatizare AI pentru Afaceri",
+  title: "Mantl | Creștem Afaceri",
   description:
     "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
   openGraph: {
