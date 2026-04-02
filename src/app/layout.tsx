@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   },
   description:
     "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
+  alternates: {
+    canonical: "https://mantl.ro",
+    languages: { "ro": "https://mantl.ro" },
+  },
   openGraph: {
     title: "mantl — Automatizăm munca repetitivă din afacerea ta",
     description: "65% din ziua ta e muncă repetitivă. Construim sisteme care o fac pentru tine. Tu te ocupi de afacere.",
@@ -43,6 +47,21 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "mantl",
+  url: "https://mantl.ro",
+  description: "Automatizăm munca repetitivă din afaceri mici și medii cu sisteme AI.",
+  foundingDate: "2026",
+  areaServed: {
+    "@type": "Country",
+    name: "Romania",
+  },
+  serviceType: ["AI Automation", "Business Process Automation", "AI Integration"],
+  knowsLanguage: "ro",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +73,10 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body style={{ fontFamily: "'DM Sans', sans-serif" }}>
