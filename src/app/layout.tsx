@@ -13,28 +13,31 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mantl.ro"),
-  title: "Mantl | Creștem Afaceri",
+  title: {
+    default: "mantl | Automatizare AI pentru Afaceri",
+    template: "%s | mantl",
+  },
   description:
     "Automatizăm munca repetitivă din afacerea ta. Construim sisteme care preiau sarcinile pe care le faci de 10 ori pe zi.",
   openGraph: {
-    title: "Mantl — Automatizăm munca repetitivă din afacerea ta",
+    title: "mantl — Automatizăm munca repetitivă din afacerea ta",
     description: "65% din ziua ta e muncă repetitivă. Construim sisteme care o fac pentru tine. Tu te ocupi de afacere.",
     type: "website",
     locale: "ro_RO",
-    siteName: "Mantl",
+    siteName: "mantl",
     url: "https://mantl.ro",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Mantl — Automatizare AI pentru Afaceri",
+        alt: "mantl — Automatizare AI pentru Afaceri",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mantl — Automatizăm munca repetitivă din afacerea ta",
+    title: "mantl — Automatizăm munca repetitivă din afacerea ta",
     description: "65% din ziua ta e muncă repetitivă. Construim sisteme care o fac pentru tine.",
     images: ["/og-image.png"],
   },

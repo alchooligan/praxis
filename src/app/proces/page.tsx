@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Cum Funcționează Automatizarea AI",
+  description:
+    "Nu schimbăm nimic din ce faci. Doar eliminăm partea pe care o urăști. Vezi procesul nostru în 3 pași: audit, implementare, monitorizare.",
+};
 
 export default function CumFunctioneaza() {
   return (

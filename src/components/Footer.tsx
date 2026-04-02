@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
-        <div className="footer-brand" style={{ fontSize: "1.6rem", marginBottom: "0.6rem" }}>Mantl</div>
+        <div className="footer-brand" style={{ fontSize: "1.6rem", marginBottom: "0.6rem" }}>mantl</div>
         <p className="footer-desc" style={{ fontSize: "1rem", marginBottom: "2.5rem" }}>Automatizăm munca repetitivă din afacerile mici și medii.</p>
 
         <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
@@ -16,7 +16,7 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>
-          &copy; 2026 Mantl. Toate drepturile rezervate.
+          &copy; 2026 mantl. Toate drepturile rezervate.
         </div>
       </div>
     </footer>

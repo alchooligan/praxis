@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Programează o Consultație Gratuită",
+  description:
+    "15 minute în care analizăm ce îți mănâncă timpul și cum automatizăm. Fără obligații, fără vânzare agresivă. Scrie-ne pe WhatsApp.",
+};
 
 export default function Contact() {
 

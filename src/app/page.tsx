@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Automatizare AI pentru Afaceri Mici",
+  description:
+    "Automatizăm munca repetitivă din afacerea ta. Construim sisteme AI care preiau sarcinile pe care le faci de 10 ori pe zi. Consultație gratuită.",
+};
 
 function DashedArrow() {
   return (
@@ -124,7 +131,7 @@ export default function Home() {
                           }} />
                         )}
                       </div>
-                      <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "rgba(255,255,255,0.7)", flex: 1 }}>MANTL</span>
+                      <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "rgba(255,255,255,0.7)", flex: 1 }}>mantl</span>
                       <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.4)" }}>{notif.time}</span>
                     </div>
                     <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.45, margin: 0 }}>{notif.text}</p>

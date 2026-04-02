@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Despre mantl — Cine Automatizează Afacerea Ta",
+  description:
+    "7 ani în tech, acum construim sisteme AI care preiau munca repetitivă din afaceri mici. Un fondator, o misiune: să nu mai pierzi timp pe ce poate face un robot.",
+};
 
 export default function Despre() {
   return (
@@ -10,7 +17,7 @@ export default function Despre() {
             fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 700, lineHeight: 1.1,
             letterSpacing: "-0.03em", color: "var(--text)",
           }}>
-            {"Despre "}<span style={{ color: "var(--blue)", textTransform: "uppercase" }}>Mantl</span>
+            {"Despre "}<span style={{ color: "var(--blue)" }}>mantl</span>
           </h1>
         </div>
       </section>
@@ -100,7 +107,7 @@ export default function Despre() {
               <h3 style={{ fontSize: "1.4rem", fontWeight: 600, letterSpacing: "-0.01em" }}>{"Agenți AI"}</h3>
               <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--coral)", marginTop: "0.3rem" }}>Echipa tehnică</p>
               <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                {"Aceiași agenți AI pe care îi folosim pentru clienți rulează și în Mantl. Monitorizare, research, rapoarte, comunicare — non-stop. Dacă ne întrebi cum știm că funcționează, răspunsul e: pentru că noi trăim pe ele în fiecare zi."}
+                {"Aceiași agenți AI pe care îi folosim pentru clienți rulează și în mantl. Monitorizare, research, rapoarte, comunicare — non-stop. Dacă ne întrebi cum știm că funcționează, răspunsul e: pentru că noi trăim pe ele în fiecare zi."}
               </p>
             </div>
           </div>
