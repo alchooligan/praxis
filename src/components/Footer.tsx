@@ -7,12 +7,27 @@ export function Footer() {
         <div className="footer-brand" style={{ fontSize: "1.6rem", marginBottom: "0.6rem" }}>mantl</div>
         <p className="footer-desc" style={{ fontSize: "1rem", marginBottom: "2.5rem" }}>Automatizăm munca repetitivă din afacerile mici și medii.</p>
 
-        <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "2rem" }}>
           <Link href="/despre" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Despre noi</Link>
           <Link href="/solutii" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Soluții</Link>
           <Link href="/proces" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Proces</Link>
           <Link href="/faq" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Întrebări frecvente</Link>
           <Link href="/contact" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", textDecoration: "none" }}>Contact</Link>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center", gap: "1.8rem", marginBottom: "2.5rem" }}>
+          <a href="https://www.instagram.com/mantl.ro/" target="_blank" rel="noopener noreferrer"
+            style={{ fontSize: "1.5rem", textDecoration: "none" }}
+            aria-label="Instagram"
+          >📸</a>
+          <a href="https://www.linkedin.com/company/mantl-ro" target="_blank" rel="noopener noreferrer"
+            style={{ fontSize: "1.5rem", textDecoration: "none" }}
+            aria-label="LinkedIn"
+          >💼</a>
+          <a href="https://wa.me/40773971703" target="_blank" rel="noopener noreferrer"
+            style={{ fontSize: "1.5rem", textDecoration: "none" }}
+            aria-label="WhatsApp"
+          >💬</a>
         </div>
 
         <div className="footer-bottom" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>
